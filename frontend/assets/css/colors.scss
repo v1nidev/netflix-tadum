@@ -1,0 +1,43 @@
+$primary: $white;
+$primary-invert: findColorInvert($primary);
+
+$secondary: #DE3039;
+$secondary-invert: $black;
+
+$gray-light: #CACACA;
+$gray-light-invert: findColorInvert($gray-light);
+$gray: #737373;
+$gray-invert: findColorInvert($gray);
+$gray-dark: #707070;
+$gray-dark-invert: findColorInvert($gray-dark);
+$gray-darker: #333333;
+$gray-darker-invert: findColorInvert($gray-darker);
+
+$site-bg: $black;
+$site-bg-invert: findColorInvert($site-bg);
+
+$colors: mergeColorMaps((
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "primary": ($primary, $primary-invert),
+  "secondary": ($secondary, $secondary-invert),
+  "gray-light": ($gray-light, $gray-light-invert),
+  "gray": ($gray, $gray-invert),
+  "gray-dark": ($gray-dark, $gray-dark-invert),
+  "gray-darker": ($gray-darker, $gray-darker-invert),
+  "site-bg": ($site-bg, $site-bg-invert),
+  ),$custom-colors);
+
+
+$text: $white;
+$text-strong: $white;
+
+$link: $primary;
+// $link-hover: $blue-heavier;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+$link-hover: $primary;
+
+$footer-background-color: $black;
+// $footer-color: $blue-gray-900;
+$footer-padding: 0rem 1.5rem 6rem;

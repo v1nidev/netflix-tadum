@@ -1,0 +1,124 @@
+// custom vars and modifications to bulma
+@import "./overrides";
+
+// custom general-classes
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+  .p-#{$space}{
+    padding: #{$space}px !important;
+  }
+  .m-#{$space}{
+    padding: #{$space}px !important;
+  }
+}
+
+.m-0-a{
+  margin: 0 auto;
+}
+
+@each $lh in $line-heights {
+  .lh-#{$lh} {
+    line-height: #{$lh}% !important;
+  }
+
+}
+
+html, body{
+  background: $site-bg;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  min-height: 100vh;
+  
+  strong{
+    color: inherit !important;
+  }
+}
+
+.modal-content{
+  background: $white;
+  border-radius: 24px;
+  padding: 40px 24px 24px;
+}
+
+.modal-close{
+  position: absolute !important;
+  top: 5px !important;
+  right: 14px !important;
+
+  &:before, &:after{
+    background: #000 !important;
+  }
+}
+
+.navbar-burger{
+  span{
+    height: 2px;
+
+    &:nth-child(1){
+      top: calc(50% - 10px) !important;
+    }
+    &:nth-child(2){
+      top: calc(50% - 2px) !important;
+    }
+    &:nth-child(3){
+      top: calc(50% + 6px) !important;
+    }
+  }
+
+  &.is-active{
+    span{
+      &:nth-child(1){
+        transform: translateY(11px) rotate(45deg) !important;
+      }
+      &:nth-child(3){
+        transform: translateY(-5px) rotate(-45deg) !important;
+      }
+    }
+
+  }
+}
+
+.breadcrumb{
+  &.has-bar-separator{
+    li + li::before{
+      content: "\007C";
+    }
+  }
+}
+
+.is-alpha-70{
+  opacity: .7 !important;
+}
+
+.is-overflow-hidden {
+  overflow: hidden;
+}
+
+.is-decoration-underline {
+  text-decoration: underline;
+}
+
+.container{
+  @include until($desktop){
+    padding: 0 16px !important;
+  }
+}
+
+.flickity-page-dots{
+  .dot{
+    &.is-selected{
+      background: $secondary;
+    }
+  }
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

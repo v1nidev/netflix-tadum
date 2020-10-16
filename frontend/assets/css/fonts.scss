@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Light.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+$family-sans-serif: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif: 'Helvetica Neue', serif;
+
+$family-primary: $family-sans-serif;
+$family-secondary: $family-sans-serif;
+
+$title-family: $family-primary;
+$title-weight: $weight-light;
+$subtitle-family: $family-primary;
+$button-family: $family-primary;
+
+$weight-ultra-bold: 900;
+
+.has-text-weight-ultra-bold{
+  font-weight: $weight-ultra-bold !important;
+}
