@@ -13,7 +13,8 @@ Vue.prototype.$createHeadFunction = (metaObject, favicon, path, analyticsData, j
   return {
     title: metaObject.title,
     meta: [
-      { hid: 'description', name: 'description', content: metaObject.title },
+      { name: 'keywords', content: metaObject.keywords },
+      { hid: 'description', name: 'description', content: metaObject.description },
       { hid: 'twitterCard', name: 'twitter:card', content: 'summary' },
       { hid: 'twitterTitle', name: 'twitter:title', content: metaObject.title },
       { hid: 'twitterDescription', name: 'twitter:description', content: metaObject.title },
