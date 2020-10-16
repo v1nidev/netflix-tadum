@@ -40,14 +40,18 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
-    if(this.flickityConfig && this.$refs.flick) {
+    this.$emit('flickDestroy')
+    if(this.fade && this.flickityConfig && this.$refs.flick) {
       this.$refs.flick.off('select', this.onSelect)
-      this.$refs.flick.off('scroll', this.onScroll)
-      this.$refs.flick.destroy()
-      this.$emit('flickDestroy')
     }
   },
   methods:{
+    onInit($flickity) {
+      $flickity.on('staticClick', this.onStaticClick)
+    },
+    onDestroy($flickity) {
+      $flickity.off('staticClick', this.onStaticClick)
+    },
     select(index){
       this.$refs.flick.select(index)
     },
@@ -85,10 +89,8 @@ export default {
         this.$refs.flick.rerender()
         this.$emit('flickRender', this.$refs.flick)
         this.$refs.flick.on('select', this.onSelect)
-        this.$refs.flick.on('scroll', this.onScroll)
       }else if(this.$refs.flick){
         this.$refs.flick.off('select', this.onSelect)
-        this.$refs.flick.off('scroll', this.onScroll)
         this.$refs.flick.destroy()
         this.$emit('flickDestroy')
       }
@@ -106,8 +108,8 @@ export default {
         })
       }
     },
-    onScroll(e){
-      this.$emit('scroll', e)
+    onStaticClick(event, pointer, cellElement, cellIndex) {
+      this.$emit('staticClick', {event, pointer, cellElement, cellIndex})
     }
   }
 }
