@@ -1,10 +1,22 @@
-// @font-face {
-//   font-family: 'Helvetica Neue';
-//   src: url('/fonts/HelveticaNeue-Light.woff2') format('woff2'),
-//       url('/fonts/HelveticaNeue-Light.woff') format('woff');
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Agipo';
+  src: url('/fonts/agipo_bold_condensed.otf') format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Grennete Pro';
+  src: url('/fonts/grenette-regular-pro.otf') format('opentype');
+  // font-weight: bold;
+  // font-style: normal;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('/fonts/NetflixSans_Lt.ttf') format('truetype');
+  // font-weight: bold;
+}
+
+
 
 // @font-face {
 //   font-family: 'Helvetica Neue';

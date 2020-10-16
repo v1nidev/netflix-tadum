@@ -1,10 +1,6 @@
 <template>
   <main class="home is-clipped">
-    <div class="container has-background-pink">
-      <p class="has-text-purple">
-        HOME
-      </p>
-    </div>
+    <!--  -->
   </main>
 </template>
 

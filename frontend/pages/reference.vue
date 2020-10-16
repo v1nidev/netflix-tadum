@@ -1,30 +1,43 @@
 <template>
   <main class="home is-clipped p-b-32 p-l-16 p-r-16">
-    <!-- resize the page -->
-    <ResponsiveImage :sources="image.src" :lazyload="false" :alt="image.alt" />
+    <div class="container has-background-pink">
+      <h1 class="title has-text-purple">
+        HOME<br>Title text
+      </h1>
+      <p class="has-text-purple">
+        Body text
+      </p>
+
+      <!-- resize the page -->
+      <ResponsiveImage :sources="image.src" :lazyload="false" :alt="image.alt" />
 
 
-    <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
+      <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
 
-    <section class="m-t-96 m-b-56">
-      <CardSlider :queries="slider_config" class="m-b-56">
-        <div v-for="index in 10" :key="index" class="p-12">
-          <div class="generic-card">
-            {{ index }}
+      <section class="m-t-96 m-b-56">
+        <CardSlider :queries="slider_config" class="m-b-56">
+          <div v-for="index in 10" :key="index" class="p-12">
+            <div class="generic-card">
+              {{ index }}
+            </div>
           </div>
-        </div>
-      </CardSlider>
-    </section>
+        </CardSlider>
+      </section>
 
-    <!-- Spotify Embed -->
-    <iframe
-      src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
-      width="300"
-      height="380"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    />
+      <p class="has-text-purple m-t-96 m-b-96">
+        Body text
+      </p>
+
+      <!-- Spotify Embed -->
+      <iframe
+        src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
+        width="300"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media"
+      />
+    </div>
   </main>
 </template>
 
