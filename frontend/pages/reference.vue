@@ -1,14 +1,38 @@
 <template>
-  <main class="home is-clipped">
+  <main class="home is-clipped p-b-32 p-l-16 p-r-16">
+    <!-- resize the page -->
     <ResponsiveImage :sources="image.src" :lazyload="false" :alt="image.alt" />
+
+
     <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
+
+    <section class="m-t-96 m-b-56">
+      <CardSlider :queries="slider_config" class="m-b-56">
+        <div v-for="index in 10" :key="index" class="p-12">
+          <div class="generic-card">
+            {{ index }}
+          </div>
+        </div>
+      </CardSlider>
+    </section>
+
+    <!-- Spotify Embed -->
+    <iframe
+      src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
+      width="300"
+      height="380"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media"
+    />
   </main>
 </template>
 
 <script>
-import ResponsiveImage from '~/components/shared/ResponsiveImage'
-import CardSlider from '~/components/shared/CardSlider'
 import baseImage from '~/utils/baseImage'
+// optional imports
+// import ResponsiveImage from '~/components/shared/ResponsiveImage'
+// import CardSlider from '~/components/shared/CardSlider'
 
 export default {
   head () {
@@ -23,10 +47,11 @@ export default {
     );
   },
 
-  components: {
-    ResponsiveImage,
-    // CardSlider,
-  },
+  // optional component declarations
+  // components: {
+  //   ResponsiveImage,
+  //   CardSlider,
+  // },
 
   data() {
     return {
@@ -36,6 +61,43 @@ export default {
       ], 'Alternative text'),
 
       image2: baseImage('/images/shared/success.svg', 'Success', 'Success'),
+
+      // all options: https://flickity.metafizzy.co/options.html
+      slider_config:[
+        {
+          max_width: 1024, // apply config above 1025px
+          config: {
+            imagesLoaded:false,
+            cellAlign: 'left',
+            contain: true,
+            draggable:true, 
+            freeScroll: false,
+            prevNextButtons: false,
+            pageDots: true,
+            wrapAround: false,
+            arrowShape: "M36.9,49.6c-0.8,0.8-0.8,2,0,2.8l22.5,23c0.6,0.6,1.6,0.6,2.2,0c0.6-0.6,0.6-1.5,0-2.1L41.1,52.4 c-0.8-0.8-0.8-2,0-2.8l22.4-22.9c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.6-0.6-2.2,0L36.9,49.6z",
+            selectedAttraction: 0.01,
+            friction: 0.15
+          }
+        },
+        {
+          max_width: 9999, // apply config to all sizes, except to <1024
+          config: {
+            imagesLoaded:false,
+            cellAlign: 'center',
+            initialIndex: 1,
+            contain: true,
+            draggable:true, 
+            freeScroll: false,
+            prevNextButtons: false,
+            pageDots: false,
+            wrapAround: false,
+            arrowShape: "M36.9,49.6c-0.8,0.8-0.8,2,0,2.8l22.5,23c0.6,0.6,1.6,0.6,2.2,0c0.6-0.6,0.6-1.5,0-2.1L41.1,52.4 c-0.8-0.8-0.8-2,0-2.8l22.4-22.9c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.6-0.6-2.2,0L36.9,49.6z",
+            selectedAttraction: 0.01,
+            friction: 0.15
+          }
+        }
+      ]
     }
   }
 }
@@ -43,7 +105,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~bulma/sass/utilities/mixins";
 @import "~assets/css/overrides";
 
+.generic-card {
+  width: 300px;
+  height: 400px;
+  background: red;
+}
 </style>
