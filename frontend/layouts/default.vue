@@ -1,20 +1,20 @@
 <template>
   <div class="default">
-    <Header />
+    <!-- <Header /> -->
     <nuxt />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import Header from '~/partials/Header'
-import Footer from '~/partials/Footer'
+// import Header from '~/partials/Header'
+// import Footer from '~/partials/Footer'
 import gtm from '~/utils/loadGtm.js'
 
 export default {
   components: {
-    Header,
-    Footer
+    // Header,
+    // Footer
   },
   watch: {
     $route(to, from) {

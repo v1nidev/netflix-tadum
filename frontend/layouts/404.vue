@@ -1,20 +1,20 @@
 <template>
   <div>
-    <Header />
+    <!-- <Header /> -->
     <div class="container">
       Página não encontrada
     </div>
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-import Header from '~/partials/Header'
-import Footer from '~/partials/Footer'
+// import Header from '~/partials/Header'
+// import Footer from '~/partials/Footer'
 export default {
   components: {
-    Header,
-    Footer
+    // Header,
+    // Footer
   },
   head () {
     return {
