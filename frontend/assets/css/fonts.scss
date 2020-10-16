@@ -23,13 +23,13 @@
 // }
 
 
-$family-sans-serif: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-serif: 'Helvetica Neue', serif;
+$family-sans-serif: 'Agipo', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif: 'Grennete', serif;
 
-$family-primary: $family-sans-serif;
+$family-primary: $family-serif;
 $family-secondary: $family-sans-serif;
 
-$title-family: $family-primary;
+$title-family: $family-secondary;
 $title-weight: $weight-light;
 $subtitle-family: $family-primary;
 $button-family: $family-primary;
