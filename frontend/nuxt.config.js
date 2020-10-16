@@ -17,6 +17,9 @@ let _modules = [
 
 
 export default {
+
+  components: true,
+
   mode: 'spa',
   /*
   ** Headers of the page
