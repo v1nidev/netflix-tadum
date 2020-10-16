@@ -55,7 +55,7 @@ export default {
     { src: '~plugins/vanillatilt.js', ssr: false },
     { src: '~plugins/youtube.js', ssr: false },
     { src: '~plugins/lazysizes.min.js', ssr: false },
-    { src: '~plugins/router-actions.js', ssr: false },
+    // { src: '~plugins/router-actions.js', ssr: false },
     { src: '~plugins/intersection-polyfill.min.js', ssr: false },
     { src: '~plugins/picture-polyfill.js', ssr: false },
     { src: '~plugins/array-from-polyfill.js', ssr: false },
