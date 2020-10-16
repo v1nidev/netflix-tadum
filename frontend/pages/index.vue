@@ -1,6 +1,8 @@
 <template>
   <main class="home is-clipped">
-    HOME
+    <p class="has-text-purple">
+      HOME
+    </p>
   </main>
 </template>
 
