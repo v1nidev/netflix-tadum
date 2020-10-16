@@ -23,10 +23,10 @@ $line-heights: ($lh-1 $lh-2 $lh-3 $lh-4 $lh-5);
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
 $tablet: 769px !default;
 // 960px container + 4rem
-$desktop: 960px + (2 * $gap) !default;
+$desktop: 1280px + (2 * $gap) !default;
 // 1152px container + 4rem
 // $widescreen: 1152px + (2 * $gap) !default;
-$widescreen: 1280px + (2 * $gap) !default;
+$widescreen: 1376px + (2 * $gap) !default;
 // 1344px container + 4rem
 // $fullhd: 1280px + (2 * $gap);
 // 1680
