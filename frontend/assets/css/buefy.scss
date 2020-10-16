@@ -120,5 +120,9 @@ html, body{
   }
 }
 
+.container {
+  max-width: 1011px !important;
+}
+
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

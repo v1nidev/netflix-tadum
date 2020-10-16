@@ -1,8 +1,10 @@
 <template>
   <main class="home is-clipped">
-    <p class="has-text-purple">
-      HOME
-    </p>
+    <div class="container has-background-pink">
+      <p class="has-text-purple">
+        HOME
+      </p>
+    </div>
   </main>
 </template>
 
