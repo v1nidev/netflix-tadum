@@ -19,7 +19,7 @@ export default {
   watch: {
     $route(to, from) {
       // Clear acitve elements (intersectionObserver) on scroll store when route changes
-      if (to.name != from.name) this.$store.dispatch('scroll/clearActiveElements')
+      // if (to.name != from.name) this.$store.dispatch('scroll/clearActiveElements')
     }
   },
   mounted() {
