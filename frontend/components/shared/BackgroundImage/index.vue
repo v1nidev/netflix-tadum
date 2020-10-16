@@ -83,7 +83,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-  @import './BackgroundImage.styl'
-</style>

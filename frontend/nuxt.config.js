@@ -60,7 +60,7 @@ export default {
     { src: '~plugins/picture-polyfill.js', ssr: false },
     { src: '~plugins/array-from-polyfill.js', ssr: false },
     { src: '~plugins/url-search-params-polyfill.js', ssr: false },
-    { src: '~plugins/splitext.js', ssr: false },
+    // { src: '~plugins/splitext.js', ssr: false },
     // { src: '~plugins/ie-polyfill.js', ssr: false },
   ],
   /*
