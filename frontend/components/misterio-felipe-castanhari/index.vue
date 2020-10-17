@@ -1,12 +1,33 @@
 <template>
   <main class="mistery">
-    <section class="container p-t-8">
+    <section class="p-t-8">
       <h3 class="has-text-centered m-b-24 p-t-32 top-title"> 
         OS DOIS LADOS 
       </h3>
-      <h2 class="title has-text-centered">
-        Mistérioooooooooooooooooooooooooooooooooooooooooooooooooooooo        
-      </h2>
+      <div class="banner is-relative">
+        <h2 class="title has-text-centered">
+          Mistérioooooooooooooooooooooooooooooooooooooooooooooooooooooo        
+        </h2>
+
+        <ResponsiveImage 
+          class="banner-sun"
+          :sources="images[0].src" 
+          :lazyload="false" 
+          :alt="images[0].alt" 
+        />
+        <ResponsiveImage 
+          class="banner-planet"
+          :sources="images[1].src" 
+          :lazyload="false" 
+          :alt="images[1].alt" 
+        />
+        <ResponsiveImage 
+          class="banner-portrait"
+          :sources="images[2].src" 
+          :lazyload="false" 
+          :alt="images[2].alt" 
+        />
+      </div>
       <p class="explanation has-text-centered">
         Só o que o Felipe Castanhari não explica (ainda) é 2020. Sobre o resto – ciência, história, como sobreviver ao EAD –, vc pode perguntar
       </p>
@@ -21,13 +42,33 @@
       </p>
     </section>
     <section class="container">
-      <span class="title has-text-centered">
-        oooooooooooooooooooooooooooooooooooooooooooooooooooooo
-      </span>
+      <div class="is-relative banner">
+        <div class="title has-text-centered">
+          oooooooooooooooooooooooooooooooooooooooooooooooooooooo
+        </div>
+
+        <ResponsiveImage 
+          class="banner-light"
+          :sources="images[3].src" 
+          :lazyload="false" 
+          :alt="images[3].alt" 
+        />
+        <ResponsiveImage 
+          class="banner-robot"
+          :sources="images[4].src" 
+          :lazyload="false" 
+          :alt="images[4].alt" 
+        />
+      </div>
+
       <p class="paragraph m-t-24">
         Se não, quem é que estaria nos ajudando a saber todos aqueles lances sobre o Triângulo das Bermudas, lobos e cachorros, inteligência artificial e mais um monte de coisa? No Mundo Mistério, do meu catálogo, o Felipe explica tanta parada importante com a ajuda de cientistas que é como um EAD com efeitos especiais. E no canal dele, que já tem mais de 13 milhões de inscritos, sempre rolam explicações de vários fenômenos e acontecimentos bacanas também. Ciência e história pra gte como a gnt. <br><br> A conexão entre o Felipe e eu vai superalém da nossa série juntos. A gente conversou um tanto sobre se ele tem uma personagem que é ele todinho (quem não? rs), o que ele anda assistindo, o que ele quer em 2021 e também um pouco (pq a gente não aguenta) sobre Mundo Mistério.
       </p>
-      <ResponsiveImage :sources="images[5].src" :lazyload="false" :alt="images[5].alt" />
+      <ResponsiveImage 
+        :sources="images[5].src" 
+        :lazyload="false" 
+        :alt="images[5].alt" 
+      />
     </section>
     <section class="container">
       <h4 class="quote border-top p-t-8 m-b-24 has-text-centered">
@@ -42,7 +83,11 @@
         Ah, o BoJack, do BoJack Horseman. Temos uns dilemas em comum, como entender a relação dele com o trabalho. Acho que a gente acaba se apegando mais ao lado mais frágil dos personagens, que é onde a gente é vulnerável.
       </p>
 
-      <ResponsiveImage :sources="images[6].src" :lazyload="false" :alt="images[6].alt" />
+      <ResponsiveImage 
+        :sources="images[6].src" 
+        :lazyload="false" 
+        :alt="images[6].alt" 
+      />
     </section>
     <section class="container">
       <p class="paragraph border-top has-text-centered p-t-8 m-b-16">
@@ -62,9 +107,18 @@
       </p>
     </section>
     <section class="container">
-      <span class="title has-text-centered">
-        oooooooooooooooooooooooooooooooooooo
-      </span>
+      <div class="banner is-relative">
+        <div class="title has-text-centered">
+          oooooooooooooooooooooooooooooooooooo
+        </div>
+
+        <ResponsiveImage 
+          class="banner-glacier"
+          :sources="images[7].src" 
+          :lazyload="false" 
+          :alt="images[7].alt" 
+        />
+      </div>
 
       <p class="paragraph border-top has-text-centered p-t-8 m-b-16">
         Sem qq plot twist nessa temporada?
@@ -103,7 +157,7 @@ export default {
     return{
       images: [
         baseImage([
-          {src:'/images/misterio-felipe-castanhari/sun.png, /images/misterio-felipe-castanhari/sun@2x.png 2x'}
+          {src:'/images/misterio-felipe-castanhari/star.png, /images/misterio-felipe-castanhari/star@2x.png 2x'}
         ], 'Alternative text'),
         baseImage([
           {src:'/images/misterio-felipe-castanhari/planet.png, /images/misterio-felipe-castanhari/planet@2x.png 2x'}
@@ -170,10 +224,48 @@ export default {
     line-height: 16px;
   }
 
-  .title{
-    line-height: 74px;
-    font-size: 85px;
-    color: #000;
+  .banner{
+
+    &-sun{
+      position: absolute;
+      top: 85px;
+      right: 93px;
+    }
+
+    &-planet{
+      position: absolute;
+      top: 150px;
+      left: 15px;
+    }
+
+    &-portrait{
+      position: absolute;
+      bottom: 0px;
+      right: 15px;
+    }
+
+    &-light{
+      position: absolute;  
+      top: 75px;
+      left: 60px;
+    }
+
+    &-robot{
+      position: absolute;
+      bottom: 0px;
+      right: 20px;
+    }
+
+    &-glacier{
+      width: 220px;
+      height: 160px;
+      position: absolute;
+      margin: auto;
+      left: 0; 
+      right: 0; 
+      top: 0;
+      bottom: 0;
+    }
   }
 
   .explanation{
@@ -200,6 +292,12 @@ export default {
     color: #000;
     font-size: 20px;
     line-height: 26px;
+  }
+
+  .title{
+    line-height: 74px;
+    font-size: 85px;
+    color: #000;
   }
 
 }
