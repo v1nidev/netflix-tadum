@@ -1,15 +1,16 @@
 <template>
-  <main class="mistery">
+  <main class="mistery m-0-a">
     <section class="p-t-8">
       <img src="~/static/images/shared/close.svg" alt="close" class="close-icon">
+
       <h3 class="has-text-centered m-b-24 p-t-32 top-title"> 
         OS DOIS LADOS 
       </h3>
-      <div class="banner is-relative">
-        <h2 class="title has-text-centered">
-          Mistérioooooooooooooooooooooooooooooooooooooooooooooooooooooo        
-        </h2>
 
+      <LetteringBanner 
+        class="is-relative banner" 
+        :lettering="'Mistériooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+      >
         <ResponsiveImage 
           class="banner-sun"
           :sources="images[0].src" 
@@ -28,11 +29,13 @@
           :lazyload="false" 
           :alt="images[2].alt" 
         />
-      </div>
+      </LetteringBanner>
+      
       <p class="explanation has-text-centered">
         Só o que o Felipe Castanhari não explica (ainda) é 2020. Sobre o resto – ciência, história, como sobreviver ao EAD –, vc pode perguntar
       </p>
     </section>
+
     <section class="container">
       <p class="has-text-centered paragraph border-top is-size-7">
         Convidei o Felipe pra contar pra gente um pouco mais sobre ele. Sem mistérios... kkkk. Fiquei sabendo até que a carreira dele poderia ter sido bem diferente se ele não tivesse falado não para uma superproposta de trampo.
@@ -42,12 +45,12 @@
         acabou mudando minha vida.” Esse ponto sem retorno parece coisa escrita por algum roteirista do meu catálogo, mas foi o que rolou real oficial com o Felipe Castanhari. Ainda bem que ele não desencanou do que realmente tava a fim de fazer da vida.
       </p>
     </section>
-    <section class="container">
-      <div class="is-relative banner">
-        <div class="title has-text-centered">
-          oooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        </div>
 
+    <section class="container">
+      <LetteringBanner 
+        class="is-relative banner" 
+        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+      >
         <ResponsiveImage 
           class="banner-light"
           :sources="images[3].src" 
@@ -60,7 +63,7 @@
           :lazyload="false" 
           :alt="images[4].alt" 
         />
-      </div>
+      </LetteringBanner>
 
       <p class="paragraph m-t-24 is-size-7">
         Se não, quem é que estaria nos ajudando a saber todos aqueles lances sobre o Triângulo das Bermudas, lobos e cachorros, inteligência artificial e mais um monte de coisa? No Mundo Mistério, do meu catálogo, o Felipe explica tanta parada importante com a ajuda de cientistas que é como um EAD com efeitos especiais. E no canal dele, que já tem mais de 13 milhões de inscritos, sempre rolam explicações de vários fenômenos e acontecimentos bacanas também. Ciência e história pra gte como a gnt. <br><br> A conexão entre o Felipe e eu vai superalém da nossa série juntos. A gente conversou um tanto sobre se ele tem uma personagem que é ele todinho (quem não? rs), o que ele anda assistindo, o que ele quer em 2021 e também um pouco (pq a gente não aguenta) sobre Mundo Mistério.
@@ -71,6 +74,7 @@
         :alt="images[5].alt" 
       />
     </section>
+
     <section class="container">
       <h4 class="quote border-top p-t-8 m-b-24 has-text-centered">
         “O deserto do Atacama. Lá, não importa o que aconteça, eu sei que, a partir das nove da noite, fico hipnotizado por aquele céu. É maravilhoso. Como é o deserto mais seco do mundo, acaba sendo um dos melhores para vc observar as estrelas e tudo mais”
@@ -90,6 +94,7 @@
         :alt="images[6].alt" 
       />
     </section>
+
     <section class="container">
       <p class="paragraph border-top has-text-centered p-t-8 m-b-16 is-size-7">
         Tem algum momento da trajetória dele em que você veja um paralelo com a sua?
@@ -107,19 +112,20 @@
         O deserto do Atacama. Lá, não importa o que aconteça, eu sei que, a partir das nove da noite, fico hipnotizado por aquele céu. É maravilhoso. Como é o deserto mais seco do mundo, acaba sendo um dos melhores para vc observar as estrelas e tudo mais. Pra mim, é um lugar de meditação. Quando fui, ficava horas olhando pro céu. Isso é minha grande paixão. Me acalma, é relaxante.
       </p>
     </section>
-    <section class="container">
-      <div class="banner is-relative">
-        <div class="title has-text-centered">
-          oooooooooooooooooooooooooooooooooooo
-        </div>
 
+    <section class="container">
+      <LetteringBanner 
+        class="is-relative banner" 
+        :height="300"
+        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+      >
         <ResponsiveImage 
           class="banner-glacier"
           :sources="images[7].src" 
           :lazyload="false" 
           :alt="images[7].alt" 
         />
-      </div>
+      </LetteringBanner>
 
       <p class="paragraph border-top has-text-centered p-t-8 m-b-16 is-size-7">
         Sem qq plot twist nessa temporada?
@@ -139,7 +145,9 @@
     </section>
 
     <MyList :cards="myList" />
+
     <Share />
+
     <img src="~/static/images/misterio-felipe-castanhari/top.svg" alt="top" class="top">
   </main>
 </template>
@@ -214,6 +222,7 @@ export default {
 
 .mistery{
   background-color: #00A651;
+  max-width: 768px;
 
   .close-icon{
     height: 45px;
@@ -245,13 +254,13 @@ export default {
     &-planet{
       position: absolute;
       top: 150px;
-      left: 15px;
+      left: 0px;
     }
 
     &-portrait{
       position: absolute;
       bottom: 0px;
-      right: 15px;
+      right: 0px;
     }
 
     &-light{
@@ -303,11 +312,14 @@ export default {
     line-height: 26px;
   }
 
-  .title{
+  /* .title{
     line-height: 74px;
     font-size: 85px;
     color: #000;
-  }
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    max-height: 445px;
+  } */
 
   .top{
     width: 45px;
