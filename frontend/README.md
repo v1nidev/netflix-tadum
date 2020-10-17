@@ -1,10 +1,10 @@
 # Guia do projeto Netflix Tadum
-- [Rodando o projeto](#rodando-o-projeto)
-- [Git flow](#git-flow)
-- [Adicionando uma nova página](#adicionando-uma-nova-página)
-- [Observações](#observações)
-- [Classes utilitárias customizadas](#classes-utilitárias-customizadas)
-- [Componentes](#componentes)
+- [Rodando o projeto](#markdown-header-rodando-o-projeto)
+- [Git flow](#markdown-header-git-flow)
+- [Adicionando uma nova página](#markdown-header-adicionando-uma-nova-pagina)
+- [Observações](#markdown-header-observacoes)
+- [Classes utilitárias customizadas](#markdown-header-classes-utilitarias-customizadas)
+- [Componentes](#markdown-header-componentes)
 
 ## Rodando o projeto
 Recomendamos o uso do gerenciador yarn para rodar o projeto e instalação de dependências.
@@ -165,7 +165,7 @@ export default {
     return {
       slider_config:[
         {
-          max_width: 1024, // apply config above 1025px
+          max_width: 1024, // apply config below 1025px
           config: {
             imagesLoaded:false,
             cellAlign: 'left',
