@@ -1,6 +1,6 @@
 <template>
   <main class="mistery m-0-a">
-    <section class="p-t-8">
+    <section class="container p-t-8">
       <img src="~/static/images/shared/close.svg" alt="close" class="close-icon">
 
       <h3 class="has-text-centered m-b-24 p-t-32 top-title"> 
@@ -9,7 +9,7 @@
 
       <LetteringBanner 
         class="is-relative banner" 
-        :lettering="'Mistériooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'Mistériooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-sun"
@@ -49,7 +49,7 @@
     <section class="container">
       <LetteringBanner 
         class="is-relative banner" 
-        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-light"
@@ -117,7 +117,7 @@
       <LetteringBanner 
         class="is-relative banner" 
         :height="300"
-        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-glacier"
@@ -248,31 +248,32 @@ export default {
     &-sun{
       position: absolute;
       top: 85px;
-      right: 93px;
+      right: 5.2rem;
     }
 
     &-planet{
       position: absolute;
       top: 150px;
-      left: 0px;
+      left: 0.5rem;
     }
 
     &-portrait{
       position: absolute;
       bottom: 0px;
-      right: 0px;
+      right: 0.5rem;
     }
 
     &-light{
       position: absolute;  
       top: 75px;
-      left: 60px;
+      //left: 60px;
+      left: 3rem;
     }
 
     &-robot{
       position: absolute;
       bottom: 0px;
-      right: 20px;
+      right: 0.5rem;
     }
 
     &-glacier{

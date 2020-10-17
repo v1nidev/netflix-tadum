@@ -27,11 +27,9 @@ export default {
     .title{
       text-align: center;
       line-height: 74px;
-      font-size: 85px;
+      font-size: 84px;
       color: #000;
       overflow: hidden;
-      /* max-height: 445px; */
-      /* -webkit-line-clamp: 6; */
     }
   }
 </style>
