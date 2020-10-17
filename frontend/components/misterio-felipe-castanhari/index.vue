@@ -86,14 +86,16 @@
         E sobre Mundo Mistério, o que te deixa mais animado agora que já tá na íntegrano catálogo?
       </p>
 
-      <p class="paragraph border-top m-t-4 m-b-24">
+      <p class="paragraph border-top m-t-4">
         Foram dois anos de trabalho. É mto bom ver pronto. O objetivo é apresentar a ciência de forma divertida, simples, assim, atrair o pessoal pro tema. Acho que tá dando certo. Pra produção dos roteiros, fiquei o tempo inteiro em contato com cientistas e pesquisadores em busca de explicações, entendendo os conceitos científicos e aprendendo coisas novas a cada dia. Tudo isso pra gente mostrar que ciência e história podem ser tão legais quanto sua série ou seu filme preferido. 
       </p>
     </section>
+    <MyList :cards="myList" />
   </main>
 </template>
 
 <script>
+
 export default {
   head () {
     return this.$createHeadFunction(
@@ -103,6 +105,26 @@ export default {
       }
     );
   },
+  data(){
+    return{
+      myList: [
+        {
+          img: 'https://pbs.twimg.com/profile_images/1311724853397917697/QApVMl3q.jpg',
+          title: 'Sem maturidade pra isso',
+          description: '“Tô achando sensacional. Tô me relacionando mto pq é a história de um casal tendo que enfrentar os perrengues do dia a dia, aquela síndrome de qndo vc chega aos 30 anos.”'
+        },
+        {
+          img: 'https://pbs.twimg.com/profile_images/1311724853397917697/QApVMl3q.jpg',
+          title: 'Rick&Morty',
+          description: '“É, deu pra ver que gosto muito de animações. Antes de começar o projeto do Mundo Mistério estava até trabalhando na criação de uma.”'
+        },
+        {
+          title: 'Outros',
+          description: 'BoJack Horseman Baki, o Campeão El Camino Power Breaking Bad O Irlândes'
+        },
+      ]
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
