@@ -78,16 +78,11 @@ export default {
         }
 
         .card-image{
-          width: auto;
-          height: auto;
 
           /deep/img{
-            max-width: fit-content;
-            width: 138px;
-            height: 192px;
+            max-width: none;
             border: 1px solid #000;
             border-radius: 10px;
-            background-color: aqua;
             margin-right: 20px;
           }
         }

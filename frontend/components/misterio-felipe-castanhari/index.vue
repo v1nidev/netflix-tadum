@@ -82,7 +82,7 @@
         Foram dois anos de trabalho. É mto bom ver pronto. O objetivo é apresentar a ciência de forma divertida, simples, assim, atrair o pessoal pro tema. Acho que tá dando certo. Pra produção dos roteiros, fiquei o tempo inteiro em contato com cientistas e pesquisadores em busca de explicações, entendendo os conceitos científicos e aprendendo coisas novas a cada dia. Tudo isso pra gente mostrar que ciência e história podem ser tão legais quanto sua série ou seu filme preferido. 
       </p>
     </section>
-    
+
     <MyList :cards="myList" />
   </main>
 </template>
@@ -101,7 +101,22 @@ export default {
   },
   data(){
     return{
-      images: [{},{},{},{},{},
+      images: [
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/sun.png, /images/misterio-felipe-castanhari/sun@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/planet.png, /images/misterio-felipe-castanhari/planet@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/felipe_1.png, /images/misterio-felipe-castanhari/felipe_1@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/light.png, /images/misterio-felipe-castanhari/light@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/robot.png, /images/misterio-felipe-castanhari/robot@2x.png 2x'}
+        ], 'Alternative text'),
         baseImage([
           {src:'/images/misterio-felipe-castanhari/felipe_2.png, /images/misterio-felipe-castanhari/felipe_2@2x.png 2x'}
         ], 'Alternative text'),
