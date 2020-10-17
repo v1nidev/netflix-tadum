@@ -6,7 +6,7 @@
     <div class="scroll-x">
       <div class="white-box is-flex">
         <div class="card is-flex" v-for="(card, i) in cards" :key="i">
-          <img class="card-image" :src="card.img" alt="" v-if="card.img">
+          <ResponsiveImage class="card-image" :sources="card.img.src" :lazyload="false" :alt="card.img.alt" v-if="card.img" />
           <div class="is-column">
             <h4 class="card-title" v-html="card.title" />
             <p class="card-description" v-html="card.description" />
@@ -21,9 +21,12 @@
 export default {
   props: {
     cards: {
-      type: Object,
+      type: Array,
       required: true
     }
+  },
+  mounted(){
+    console.log(this.$props.cards)
   }
 }
 </script>
@@ -75,12 +78,18 @@ export default {
         }
 
         .card-image{
-          width: 138px;
-          height: 192px;
-          border: 1px solid #000;
-          border-radius: 10px;
-          background-color: aqua;
-          margin-right: 20px;
+          width: auto;
+          height: auto;
+
+          /deep/img{
+            max-width: fit-content;
+            width: 138px;
+            height: 192px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: aqua;
+            margin-right: 20px;
+          }
         }
 
         .card-title{

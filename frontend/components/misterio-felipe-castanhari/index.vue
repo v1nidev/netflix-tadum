@@ -27,11 +27,7 @@
       <p class="paragraph m-t-24">
         Se não, quem é que estaria nos ajudando a saber todos aqueles lances sobre o Triângulo das Bermudas, lobos e cachorros, inteligência artificial e mais um monte de coisa? No Mundo Mistério, do meu catálogo, o Felipe explica tanta parada importante com a ajuda de cientistas que é como um EAD com efeitos especiais. E no canal dele, que já tem mais de 13 milhões de inscritos, sempre rolam explicações de vários fenômenos e acontecimentos bacanas também. Ciência e história pra gte como a gnt. <br><br> A conexão entre o Felipe e eu vai superalém da nossa série juntos. A gente conversou um tanto sobre se ele tem uma personagem que é ele todinho (quem não? rs), o que ele anda assistindo, o que ele quer em 2021 e também um pouco (pq a gente não aguenta) sobre Mundo Mistério.
       </p>
-      <img 
-        class="img"
-        src="https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2020/05/castanhari-418x235.jpg" 
-        alt=""
-      >
+      <ResponsiveImage :sources="images[5].src" :lazyload="false" :alt="images[5].alt" />
     </section>
     <section class="container">
       <h4 class="quote border-top p-t-8 m-b-24 has-text-centered">
@@ -46,11 +42,7 @@
         Ah, o BoJack, do BoJack Horseman. Temos uns dilemas em comum, como entender a relação dele com o trabalho. Acho que a gente acaba se apegando mais ao lado mais frágil dos personagens, que é onde a gente é vulnerável.
       </p>
 
-      <img 
-        class="img"
-        src="https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2020/05/castanhari-418x235.jpg" 
-        alt=""
-      >
+      <ResponsiveImage :sources="images[6].src" :lazyload="false" :alt="images[6].alt" />
     </section>
     <section class="container">
       <p class="paragraph border-top has-text-centered p-t-8 m-b-16">
@@ -90,11 +82,13 @@
         Foram dois anos de trabalho. É mto bom ver pronto. O objetivo é apresentar a ciência de forma divertida, simples, assim, atrair o pessoal pro tema. Acho que tá dando certo. Pra produção dos roteiros, fiquei o tempo inteiro em contato com cientistas e pesquisadores em busca de explicações, entendendo os conceitos científicos e aprendendo coisas novas a cada dia. Tudo isso pra gente mostrar que ciência e história podem ser tão legais quanto sua série ou seu filme preferido. 
       </p>
     </section>
+    
     <MyList :cards="myList" />
   </main>
 </template>
 
 <script>
+import baseImage from '~/utils/baseImage'
 
 export default {
   head () {
@@ -107,14 +101,30 @@ export default {
   },
   data(){
     return{
+      images: [{},{},{},{},{},
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/felipe_2.png, /images/misterio-felipe-castanhari/felipe_2@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/felipe_3.png, /images/misterio-felipe-castanhari/felipe_3@2x.png 2x'}
+        ], 'Alternative text'),
+        baseImage([
+          {src:'/images/misterio-felipe-castanhari/geleira.png, /images/misterio-felipe-castanhari/geleira@2x.png 2x'}
+        ], 'Alternative text'),
+      ],
+
       myList: [
         {
-          img: 'https://pbs.twimg.com/profile_images/1311724853397917697/QApVMl3q.jpg',
+          img: baseImage([
+            {src:'/images/misterio-felipe-castanhari/rick_morty.png, /images/misterio-felipe-castanhari/rick_morty@2x.png 2x'}
+          ], 'Alternative text'),
           title: 'Sem maturidade pra isso',
           description: '“Tô achando sensacional. Tô me relacionando mto pq é a história de um casal tendo que enfrentar os perrengues do dia a dia, aquela síndrome de qndo vc chega aos 30 anos.”'
         },
         {
-          img: 'https://pbs.twimg.com/profile_images/1311724853397917697/QApVMl3q.jpg',
+          img: baseImage([
+            {src:'/images/misterio-felipe-castanhari/never_have.png, /images/misterio-felipe-castanhari/never_have@2x.png 2x'}
+          ], 'Alternative text'),
           title: 'Rick&Morty',
           description: '“É, deu pra ver que gosto muito de animações. Antes de começar o projeto do Mundo Mistério estava até trabalhando na criação de uma.”'
         },
