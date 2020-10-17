@@ -14,7 +14,7 @@ export default {
     },
     lettering: {
       type: String,
-      default: ''
+      required: true
     }
   }
 }

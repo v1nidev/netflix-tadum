@@ -268,3 +268,17 @@ https://github.com/kaorun343/vue-youtube-embed
 export default { }
 </script>
 ```
+
+### LetteringBanner
+Wrapper que recebe a altura máxima e o texto de background como props. As imagens flutuantes podem ser passadas dentro do componente
+```
+<template>
+  <LetteringBanner 
+    class="is-relative banner"
+    :height="300" //445 default
+    :lettering="'Mistériooooooooooo'" //required
+  >
+    <ResponsiveImage :sources="image.src" :alt="image.alt" />
+  </LetteringBanner>
+</template>
+```
