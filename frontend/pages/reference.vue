@@ -14,8 +14,8 @@
 
       <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
 
-      <section class="m-t-96 m-b-56">
-        <CardSlider :queries="slider_config" class="m-b-56">
+      <section class="m-t-60 m-b-50">
+        <CardSlider :queries="slider_config" class="m-b-50">
           <div v-for="index in 10" :key="index" class="p-12">
             <div class="generic-card">
               {{ index }}
@@ -36,6 +36,11 @@
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media"
+      />
+
+      <Share
+        text-class="has-text-yellow"
+        button-class="is-secondary"
       />
     </div>
   </main>
