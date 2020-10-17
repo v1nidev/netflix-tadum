@@ -1,7 +1,13 @@
-# Markdown syntax guide
+# Guia do projeto Netflix Tadum
+- [Rodando o projeto](#rodando-o-projeto)
+- [Git flow](#git-flow)
+- [Adicionando uma nova página](#adicionando-uma-nova-página)
+- [Observações](#observações)
+- [Classes utilitárias customizadas](#classes-utilitárias-customizadas)
+- [Componentes](#componentes)
 
 ## Rodando o projeto
-Recomendamos o uso do gerenciador yarn.
+Recomendamos o uso do gerenciador yarn para rodar o projeto e instalação de dependências.
 
 ```
 # instale as dependencias
@@ -10,6 +16,24 @@ yarn
 # rode o projeto em modo dev
 yarn dev
 ```
+## Git flow
+Antes de iniciar o desenvolvimento de uma feature ou página, crie uma branch separada a partir da master.
+```
+git checkout master
+
+git pull
+
+git checkout -b feature/<page-name-or-feature>
+```
+Após finalizar o desenvolvimento, envie sua branch para o repositório:
+```
+git add file.txt
+
+git commit -m "Do this"
+
+git push -u origin feature/<page-name-or-feature>
+```
+Termine fazendo o PR para a branch master.
 
 ## Adicionando uma nova página
 Novas páginas devem ser adicionadas na pasta frontend/components/ seguindo o padrão kebab-case, exemplo: `/nova-pagina/index.vue`
@@ -27,7 +51,56 @@ Utilizamos o bulma e o buefy no projeto, então existem diversas classes e compo
 - https://bulma.io/
 - https://buefy.org/
 
-## 
+Para conferir como alguns componentes/classes são utilizados dentro do próprio projeto, deixamos uma página de referência em:
+
+frontend/pages/reference.vue
+
+
+
+## Classes utilitárias customizadas
+O bulma não disponibiliza classes utilitárias pra tudo, por isso, adicionamos as nossas.
+### Espaçamento
+Verifique todos os tamanhos em frontend/assets/css/spacings.scss
+```
+// aplica padding/margin em todos os lados:
+p-#/m-#
+
+// aplica padding/margin somente na horizontal (left e right):
+p-x-#/m-x-#
+
+// aplica padding/margin somente na vertical (top e bottom):
+p-y-#/m-y-#
+
+// margin 0 auto, pra centralizar as coisas:
+m-0-a
+
+// adicionando esse sufixo nas classes de padding e margin é a mesma coisa q utilizar no css o until($desktop), é o responsivo pra touch, serve em todas as formas de padding e margin
+-touch
+// exemplos:
+m-t-8-touch
+p-4-touch
+```
+### Tamanhos de fonte
+Todos os tamanhos podem ser conferidos em frontend/assets/css/sizes.scss
+```
+// classes de font-size
+.is-size-1 // 193.91px ($size-1)
+.is-size-7 // 20px ($size-7)
+```
+
+### Cores
+As cores definidas podem ser conferidas em frontend/assets/css/colors.scss
+```
+// classes de cor de texto
+.has-text-purple
+.has-text-primary
+.has-text-gray-light
+
+// classes de cor de fundo
+.has-background-purple
+.has-background-green
+.has-background-yellow
+```
 
 ## Componentes
 Lista dos componentes compartilhados e uso básico. Para mais detalhes, verifique o componente dentro do projeto.
