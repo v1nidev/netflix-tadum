@@ -165,7 +165,7 @@ export default {
     return {
       slider_config:[
         {
-          max_width: 1024, // apply config above 1025px
+          max_width: 1024, // apply config below 1025px
           config: {
             imagesLoaded:false,
             cellAlign: 'left',
