@@ -1,6 +1,7 @@
 <template>
   <main class="mistery">
     <section class="p-t-8">
+      <img src="~/static/images/shared/close.svg" alt="close" class="close-icon">
       <h3 class="has-text-centered m-b-24 p-t-32 top-title"> 
         OS DOIS LADOS 
       </h3>
@@ -138,6 +139,8 @@
     </section>
 
     <MyList :cards="myList" />
+    <Share />
+    <img src="~/static/images/misterio-felipe-castanhari/top.svg" alt="top" class="top">
   </main>
 </template>
 
@@ -211,6 +214,13 @@ export default {
 
 .mistery{
   background-color: #00A651;
+
+  .close-icon{
+    height: 45px;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+  }
 
   .container{
     padding: 0px 20px;
@@ -298,6 +308,13 @@ export default {
     line-height: 74px;
     font-size: 85px;
     color: #000;
+  }
+
+  .top{
+    width: 45px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
   }
 
 }
