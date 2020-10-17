@@ -38,9 +38,16 @@
         allow="encrypted-media"
       />
 
+      <!-- Share used at the bottom of the page -->
       <Share
         text-class="has-text-yellow"
         button-class="is-secondary"
+      />
+
+      <!-- Youtube Video Frame -->
+      <VideoFrame
+        video-id="5qap5aO4i9A"
+        style="height: 500px"
       />
     </div>
   </main>
@@ -57,7 +64,7 @@ export default {
     return this.$createHeadFunction(
       {
         title: 'title',
-        description: ''
+        description: 'Referencia de como usar componentes e classes'
       }, 
       null, 
       this.$route.path, 
