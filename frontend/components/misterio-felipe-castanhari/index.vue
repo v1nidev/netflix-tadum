@@ -138,6 +138,7 @@ export default {
   }
 
   .top-title{
+    color: #000;
     font-family: Netflix Sans;
     font-weight: 500;
     font-size: 14px;
