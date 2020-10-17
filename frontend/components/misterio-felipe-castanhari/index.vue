@@ -252,32 +252,32 @@ export default {
     &-sun{
       position: absolute;
       top: 85px;
-      right: 5.2rem;
+      right: 5rem;
     }
 
     &-planet{
       position: absolute;
       top: 150px;
-      left: 0.5rem;
+      left: 0.2rem;
     }
 
     &-portrait{
       position: absolute;
       bottom: 0px;
-      right: 0.5rem;
+      right: 0.2rem;
     }
 
     &-light{
       position: absolute;  
       top: 75px;
       //left: 60px;
-      left: 3rem;
+      left: 2.5rem;
     }
 
     &-robot{
       position: absolute;
       bottom: 0px;
-      right: 0.5rem;
+      right: 0.2rem;
     }
 
     &-glacier{
