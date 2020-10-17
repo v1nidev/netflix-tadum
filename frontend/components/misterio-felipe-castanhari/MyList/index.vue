@@ -80,13 +80,13 @@ export default {
 
           /deep/img{
             max-width: none;
-            /* border: 1px solid #000; */
             border-radius: 10px;
             margin-right: 20px;
           }
         }
 
         .card-title{
+          white-space: nowrap;
           font-style: italic;
           font-weight: normal;
           font-size: 32px;

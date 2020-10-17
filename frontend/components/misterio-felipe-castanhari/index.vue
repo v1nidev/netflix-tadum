@@ -9,7 +9,7 @@
 
       <LetteringBanner 
         class="is-relative banner" 
-        :lettering="'Mistériooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'Mistérioooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-sun"
@@ -49,7 +49,7 @@
     <section class="container">
       <LetteringBanner 
         class="is-relative banner" 
-        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-light"
@@ -121,7 +121,7 @@
       <LetteringBanner 
         class="is-relative banner" 
         :height="300"
-        :lettering="'oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
+        :lettering="'ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo'"
       >
         <ResponsiveImage 
           class="banner-glacier"
@@ -226,7 +226,6 @@ export default {
 
 .mistery{
   background-color: #00A651;
-  max-width: 768px;
 
   .close-icon{
     height: 45px;
