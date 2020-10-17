@@ -1,9 +1,9 @@
 # Guia do projeto Netflix Tadum
 - [Rodando o projeto](#markdown-header-rodando-o-projeto)
 - [Git flow](#markdown-header-git-flow)
-- [Adicionando uma nova página](#markdown-header-adicionando-uma-nova-página)
-- [Observações](#markdown-header-observações)
-- [Classes utilitárias customizadas](#markdown-header-classes-utilitárias-customizadas)
+- [Adicionando uma nova página](#markdown-header-adicionando-uma-nova-pagina)
+- [Observações](#markdown-header-observacoes)
+- [Classes utilitárias customizadas](#markdown-header-classes-utilitarias-customizadas)
 - [Componentes](#markdown-header-componentes)
 
 ## Rodando o projeto
