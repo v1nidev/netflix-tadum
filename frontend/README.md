@@ -239,3 +239,32 @@ Informação completa: https://developer.spotify.com/documentation/widgets/gener
 export default { }
 </script>
 ```
+### Share
+Componente simples, que normalmente será utilizado no final das páginas internas.
+```
+<template>
+  <Share
+    text-class="has-text-yellow"
+    button-class="is-secondary"
+  />
+</template>
+
+<script>
+export default { }
+</script>
+```
+### VideoFrame
+Wrapper com os estilos próprios do projeto sobre uma lib que prove uma interface para a API do YouTube. O componente extende todos os listeners e props descritos aqui:
+https://github.com/kaorun343/vue-youtube-embed
+```
+<template>
+  <VideoFrame
+    video-id="5qap5aO4i9A"
+    style="height: 500px"
+  />
+</template>
+
+<script>
+export default { }
+</script>
+```
