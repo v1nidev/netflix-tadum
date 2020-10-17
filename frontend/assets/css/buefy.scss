@@ -2,22 +2,71 @@
 @import "./overrides";
 
 // custom general-classes
-@each $space in $spaceamounts {
-  @each $side in $sides {
-    .m-#{str-slice($side, 0, 1)}-#{$space} {
-      margin-#{$side}: #{$space}px !important;
+@mixin spacings($target){
+  @each $space in $spaceamounts {
+    .m-#{$space}#{if($target == '', '', '-' + $target)} {
+      margin: #{$space}px !important;
+    }
+    .p-#{$space}#{if($target == '', '', '-' + $target)} {
+      padding: #{$space}px !important;
     }
 
-    .p-#{str-slice($side, 0, 1)}-#{$space} {
-      padding-#{$side}: #{$space}px !important;
+    .m-x-#{$space}#{if($target == '', '', '-' + $target)} {
+      margin-left: #{$space}px !important;
+      margin-right: #{$space}px !important;
+    }
+    .p-x-#{$space}#{if($target == '', '', '-' + $target)} {
+      padding-left: #{$space}px !important;
+      padding-right: #{$space}px !important;
+    }
+
+    .m-y-#{$space}#{if($target == '', '', '-' + $target)} {
+      margin-top: #{$space}px !important;
+      margin-bottom: #{$space}px !important;
+    }
+    .p-y-#{$space}#{if($target == '', '', '-' + $target)} {
+      padding-top: #{$space}px !important;
+      padding-bottom: #{$space}px !important;
+    }
+
+    @each $side in $sides {
+      .m-#{str-slice($side, 0, 1)}-#{$space}#{if($target == '', '', '-' + $target)} {
+        margin-#{$side}: #{$space}px !important;
+      }
+      .p-#{str-slice($side, 0, 1)}-#{$space}#{if($target == '', '', '-' + $target)} {
+        padding-#{$side}: #{$space}px !important;
+      }
     }
   }
-  .p-#{$space}{
-    padding: #{$space}px !important;
+}
+
+@include spacings('');
+@include until($desktop){
+  @include spacings('touch');
+}
+
+
+.m-0-a{
+  margin: 0 auto !important;
+}
+
+.m-0-a-touch{
+  @include until($desktop){
+    margin: 0 auto !important;
   }
-  .m-#{$space}{
-    padding: #{$space}px !important;
-  }
+}
+
+.m-x-a {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.m-r-a {
+  margin-right: auto;
+}
+
+.m-l-a {
+  margin-left: auto;
 }
 
 .m-0-a{
