@@ -1,14 +1,14 @@
 <template>
   <section class="container">
     <h3 class="has-text-centered subtitle"> 
-      Minha lista 
+      Minha lista →
     </h3>
     <div class="scroll-x">
       <div class="white-box is-flex">
         <div class="card is-flex" v-for="(card, i) in cards" :key="i">
           <ResponsiveImage class="card-image" :sources="card.img.src" :lazyload="false" :alt="card.img.alt" v-if="card.img" />
           <div class="is-column">
-            <h4 class="card-title" v-html="card.title" />
+            <h4 class="card-title m-t-12" v-html="card.title" />
             <p class="card-description" v-html="card.description" />
           </div>
         </div>
@@ -54,15 +54,14 @@ export default {
       /* min-height: 230px; */
       height: auto;
       width: 1170px;
-      background-color: #ffffff;
+      background-color: #FCF1E5;
       border: 2px solid #000;
       border-radius: 20px;
-      margin: 10px 20px;
+      margin: 0px 20px;
 
       .card{
         color: #000;
         justify-content: center;
-        align-items: center;
         padding: 20px;
 
         &:first-child{
@@ -81,7 +80,7 @@ export default {
 
           /deep/img{
             max-width: none;
-            border: 1px solid #000;
+            /* border: 1px solid #000; */
             border-radius: 10px;
             margin-right: 20px;
           }
