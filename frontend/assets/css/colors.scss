@@ -42,14 +42,14 @@ $colors: mergeColorMaps((
   ),$custom-colors);
 
 
-$text: $white;
-$text-strong: $white;
+$text: $black;
+$text-strong: $black;
 
-$link: $primary;
+$link: $black;
 // $link-hover: $blue-heavier;
-$link-invert: $primary-invert;
+$link-invert: $white;
 $link-focus-border: $primary;
-$link-hover: $primary;
+$link-hover: $black;
 
 $footer-background-color: $black;
 // $footer-color: $blue-gray-900;
