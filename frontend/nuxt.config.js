@@ -8,7 +8,8 @@ let _modules = [
   '@nuxtjs/axios',
   '@nuxtjs/device',
   ['nuxt-buefy', { 
-    css: false
+    css: false,
+    materialDesignIcons: false,
   }],
   // ['@nuxtjs/google-tag-manager', 'GTM-ID-HERE']
 ]
