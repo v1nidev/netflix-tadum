@@ -8,7 +8,8 @@ let _modules = [
   '@nuxtjs/axios',
   '@nuxtjs/device',
   ['nuxt-buefy', { 
-    css: false
+    css: false,
+    materialDesignIcons: false,
   }],
   // ['@nuxtjs/google-tag-manager', 'GTM-ID-HERE']
 ]
@@ -55,16 +56,8 @@ export default {
     { src: '~plugins/injected-functions.js', ssr: true },
     { src: '~plugins/global-components.js', ssr: true },
     { src: '~plugins/external-components.js', ssr: false },
-    { src: '~plugins/vanillatilt.js', ssr: false },
-    { src: '~plugins/youtube.js', ssr: false },
     { src: '~plugins/lazysizes.min.js', ssr: false },
-    // { src: '~plugins/router-actions.js', ssr: false },
     { src: '~plugins/intersection-polyfill.min.js', ssr: false },
-    { src: '~plugins/picture-polyfill.js', ssr: false },
-    { src: '~plugins/array-from-polyfill.js', ssr: false },
-    { src: '~plugins/url-search-params-polyfill.js', ssr: false },
-    // { src: '~plugins/splitext.js', ssr: false },
-    // { src: '~plugins/ie-polyfill.js', ssr: false },
   ],
   /*
   ** Nuxt.js modules
