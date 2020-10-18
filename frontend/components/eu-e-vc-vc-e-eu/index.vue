@@ -60,7 +60,12 @@
         queria. Nossa, nunca vi isso acontecer na vida real…
       </p>
       <hr />
-      <ResponsiveImage :sources="rt.src" :lazyload="false" :alt="rt.alt" />
+      <ResponsiveImage
+        :sources="rt.src"
+        :lazyload="false"
+        :alt="rt.alt"
+        class="rt-image"
+      />
       <div class="ele-viu">
         <h3>Ele viu!</h3>
         <p>
@@ -148,9 +153,9 @@
       </p>
       <hr />
       <h2>Colo meu ouvido <br />num radinho</h2>
-      <div class="video-dustin">
+      <div class="video-dustin image-sub">
         <div>
-          <VideoFrame video-id="5qap5aO4i9A" style="height: 500px" />
+          <VideoFrame video-id="9_LoWFgYaUI" style="height: 194px" />
           <p>
             Na década de 1980, os namoros ainda não eram na internet, mas já
             rolava cobrança
@@ -284,12 +289,63 @@ export default {
 
 <style lang="scss" scoped>
 @import "~assets/css/overrides";
+
 /deep/.button.share-button {
   background-color: $gray-light;
   color: $black;
 
   &:hover {
     color: $gray;
+  }
+}
+
+/deep/.video-frame {
+  border-radius: 0px !important;
+  video {
+    display: block !important;
+  }
+}
+
+/deep/.responsive-image {
+  text-align: center;
+  & img {
+    display: block;
+    width: 100%;
+  }
+  &.rt-image {
+    & img {
+      display: inline-block;
+      text-align: center;
+      max-width: 700px !important;
+    }
+  }
+}
+
+@mixin image-box($radius-box) {
+  $unit: unquote("px");
+  position: relative;
+  overflow: hidden;
+  border: 1.2px solid $black;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 10px black inset;
+  border-radius: #{$radius-box}$unit;
+}
+
+.image-sub {
+  $unit: unquote("px");
+  position: relative;
+  overflow: hidden;
+  border: 1.2px solid $black;
+  box-sizing: border-box;
+  /* box-shadow: 0px 0px 0px 10px black inset; */
+  border-radius: 20px;
+  & > img {
+    position: absolute;
+  }
+
+  & p {
+    background-color: $yellow;
+    padding: 9px 14px;
   }
 }
 
@@ -346,6 +402,115 @@ export default {
       font-size: 90px;
       br {
         display: none;
+      }
+    }
+  }
+  p {
+    font-family: "Grennete Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: $black;
+  }
+  hr {
+    margin: 35px 0;
+    padding: 0;
+    border: 0;
+    border-top: 1.5px dashed $black;
+    background-color: transparent;
+    height: 0px;
+  }
+  h2 {
+    font-family: "Grennete Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    color: $black;
+    margin-bottom: 31px;
+    @include from($tablet) {
+      br {
+        display: none;
+      }
+    }
+  }
+  & .image1 {
+    margin-top: 21px;
+    margin-bottom: 24px;
+    position: relative;
+    & > div {
+      @include image-box(50);
+    }
+
+    & .rt,
+    & .selfie {
+      position: absolute;
+      transform: scale(0.7);
+      transform-origin: center;
+      z-index: 10;
+    }
+    & .rt {
+      left: 2%;
+      transform: scale(0.7) translateY(-65%);
+      top: 0;
+    }
+    & .selfie {
+      right: 5%;
+      bottom: -30px;
+      transform: scale(0.7);
+    }
+    @include from(400px) {
+      & .rt {
+        transform: scale(1) translateY(-65%);
+      }
+      & .selfie {
+        transform: scale(1);
+      }
+    }
+  }
+  & .image2 {
+    margin-bottom: 31px;
+  }
+  & .image4 {
+    margin-bottom: 31px;
+  }
+  & .video-dustin {
+    & p {
+      margin-top: -7px;
+    }
+  }
+  & .ele-viu {
+    background-color: $white;
+    border-radius: 20px;
+    border: 1.2px solid $black;
+    padding: 34px 5% 19px;
+    & h3 {
+      font-family: $family-sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 87.5%;
+      letter-spacing: -0.02em;
+      color: $black;
+      margin-bottom: 19px;
+    }
+    p {
+      font-family: "Grennete Pro";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: -0.005em;
+      color: $black;
+      margin-bottom: 29px;
+    }
+    margin-top: 51px;
+    & .image3 {
+      & > img {
+        position: absolute;
       }
     }
   }
