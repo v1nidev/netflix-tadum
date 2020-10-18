@@ -87,16 +87,16 @@ export default {
 
   & /deep/.box-container {
     & picture {
+      display: block;
+      padding: 0 1rem;
+
       & img {
         border-radius: $size-7;
         border: 1.2px solid black;
-        max-width: 95%;
       }
 
       & img.header-image {
-        display: block;
         margin: auto;
-        max-width: 100%;
       }
     }
 
