@@ -11,7 +11,7 @@ export const looseCard = {
     [
       {
         src: `${firstLooseImage2x}, ${firstLooseImage2x} 2x`,
-        query: "(max-width: 1023px)",
+        query: "(max-width: 767px)",
       },
       {
         src: `${firstLooseImage4x}, ${firstLooseImage4x} 2x`,

@@ -65,7 +65,7 @@ export default {
   }
 
   & .section-header-text-in-a-box {
-    margin: ($size-7 + 5) ($size-7 + 10) 0;
+    margin: ($size-7 + 5) ($size-7 + 5) 0;
     font-size: 32px;
     font-family: Grennete Pro;
     font-weight: 400;

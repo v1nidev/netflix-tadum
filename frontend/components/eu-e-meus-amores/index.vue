@@ -14,7 +14,6 @@
             :sources="looseCard.imageSet.src"
             :lazyload="false"
             :alt="looseCard.imageSet.alt"
-            imgClass="image-block"
           />
           <header class="section-header-text">
             Quando a gente divide o tempo entre crush e migues, 24horas parece pouco, né? Mas bora lá que esse problema é do tipo “vira essa boca pra cá”. Se organizar direitinho, isso só acontece nas séries e filmes.
@@ -106,6 +105,8 @@ export default {
   }
 
   & .section-container {
+    max-width: 650px;
+    margin: auto;
     & .section-header-text {
       margin: ($size-7 + 5) ($size-8 - 6) $size-5;
       font-size: 17px;
