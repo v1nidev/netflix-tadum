@@ -1,5 +1,5 @@
 <template>
-  <main class="home is-clipped p-b-32 p-l-16 p-r-16">
+  <main class="home has-background-black is-clipped p-b-32 p-l-16 p-r-16">
     <div class="container has-background-pink">
       <h1 class="title has-text-purple">
         HOME<br>Title text
@@ -129,12 +129,21 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~assets/css/overrides";
 
 .generic-card {
   width: 300px;
   height: 400px;
   background: red;
+}
+
+// Scroll to top customization
+.scroll-top-btn {
+  background: $black;
+  border-color: $pink;;
+}
+.scroll-top-btn .icon{
+  stroke: $pink;
 }
 </style>
