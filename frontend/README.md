@@ -4,6 +4,7 @@
 - [Adicionando uma nova página](#markdown-header-adicionando-uma-nova-pagina)
 - [Observações](#markdown-header-observacoes)
 - [Classes utilitárias customizadas](#markdown-header-classes-utilitarias-customizadas)
+- [Estilização customizada de elementos globais](#markdown-header-estilizacao-customizada-de-elementos-globais)
 - [Componentes](#markdown-header-componentes)
 
 ## Rodando o projeto
@@ -100,6 +101,23 @@ As cores definidas podem ser conferidas em frontend/assets/css/colors.scss
 .has-background-purple
 .has-background-green
 .has-background-yellow
+```
+## Estilização customizada de elementos globais
+### Botão Scroll to top
+Para customizar o botão, adicione o estilo como no trecho abaixo na tag `style` (sem o atributo `scoped`) no index.vue da página.
+```
+<style lang="scss">
+@import "~assets/css/overrides";
+
+// Scroll to top customization
+.scroll-top-btn {
+  background: $black;
+  border-color: $pink;;
+}
+.scroll-top-btn .icon{
+  stroke: $pink;
+}
+</style>
 ```
 
 ## Componentes
