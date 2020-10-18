@@ -105,7 +105,7 @@ export default {
   }
 
   & .section-container {
-    max-width: 650px;
+    max-width: 1000px;
     margin: auto;
     & .section-header-text {
       margin: ($size-7 + 5) ($size-8 - 6) $size-5;

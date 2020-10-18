@@ -26,9 +26,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  mounted(){
-    console.log(this.$props.cardsList)
   }
 };
 </script>
@@ -48,6 +45,20 @@ export default {
     height: 272px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    width: 100%;
+
+    .yt-container, /deep/ iframe {
+      display: block;
+      height: 100%;
+      width: 100%;
+      @media (min-width: $tablet) {
+        height: 400px;
+      }
+
+       @media (min-width: $tablet) {
+        height: 600px;
+      }
+    }
 
     & /deep/.play-btn {
       svg > circle {
