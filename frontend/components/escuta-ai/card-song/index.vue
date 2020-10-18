@@ -66,6 +66,7 @@ export default {
   border-radius: 0 !important;
   padding: 0;
   margin: 0;
+  width: 100% !important;
   & iframe {
     width: 100%;
   }
