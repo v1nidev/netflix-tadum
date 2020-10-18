@@ -40,7 +40,7 @@ export const cardsList = [
   },
   {
     headerText: "Puleng & Wade & KB, de Sangue & Água",
-    footerText: "Mais um tal de mente daqui e mente dali. Puleng inventa uma desculpinha bem da esfarrapada pra não falar pro amigo que ia ficar com o crush. Precisa disso, gente?",
+    footerText: "Mais um tal de mente daqui e mente dali. Puleng inventa uma desculpinha bem da esfarrapada pra não falar pro amigo q ia ficar com o crush. Precisa disso, gente?",
     videoId: '5qap5aO4i9A',
   }
 ]
