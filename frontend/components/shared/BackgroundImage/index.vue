@@ -1,6 +1,5 @@
 <template>
   <div class="responsive-background-image" ref="background_img" :class="{'loadings': loading}" :style="bgImage">
-    <script v-if="isIE" :src="require('~/plugins/picture-polyfill.js')" />
     <picture>
       <source 
         v-for="(source, index) in filteredSources"
