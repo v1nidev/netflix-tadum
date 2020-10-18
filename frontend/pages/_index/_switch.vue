@@ -6,9 +6,8 @@
 export default {
   computed: {
     component() {
-      // return () => import(`~/components/internal-page/index.vue`);
-      return () => import(`~/components${this.$route.path}/index.vue`);
+      return () => import(`~/components/${this.$route.path.replace(/^\/+|\/+$/g, '')}/index.vue`);
     }
-  },
+  }
 }
 </script>
