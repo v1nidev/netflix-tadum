@@ -14,7 +14,10 @@
 
       <section>
         <div class="card m-x-a m-b-16">
-          <img src="/images/com-tempo-irmao/larissa.png" alt="" class="larissa">
+          <ResponsiveImage 
+            :sources="[{src:'/images/com-tempo-irmao/larissa.png, /images/com-tempo-irmao/larissa@2x.png'}]"
+            :alt="'Larissa'" 
+          />
 
           <p class="description has-background-green has-text-centered p-x-16 p-t-8 p-b-16">
             Ninguém sabia que passaríamos tanto tempo em casa esse ano. Resta a gente se inspirar em Ana, de Modo Avião, que ficou na casa do avô  pra  encontrar umas ocupações nessa quarentena infinita... 
