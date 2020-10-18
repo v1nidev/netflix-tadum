@@ -1,6 +1,5 @@
 import baseImage from "~/utils/baseImage"
-import animatedGif2x from "~/static/images/como-fazer-um-roteiro/animated@2x-gif.png"
-import animatedGif4x from "~/static/images/como-fazer-um-roteiro/animated@4x-gif.png"
+import animatedGif2x from "~/static/images/como-fazer-um-roteiro/animated-gif.gif"
 
 import onceUpon2x from '~/static/images/como-fazer-um-roteiro/once-upon@2x.png'
 import onceUpon4x from '~/static/images/como-fazer-um-roteiro/once-upon@4x.png'
@@ -27,7 +26,7 @@ export const entryArticle = {
         query: "(max-width: 767px)",
       },
       {
-        src: `${animatedGif4x}, ${animatedGif4x} 1x`,
+        src: `${animatedGif2x}, ${animatedGif2x} 1x`,
         query: "",
       },
     ],
@@ -44,11 +43,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${onceUpon2x}, ${onceUpon2x} 2x`,
+          src: `${onceUpon4x}, ${onceUpon4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${onceUpon4x}, ${onceUpon4x} 1x`,
+          src: `${onceUpon2x}, ${onceUpon2x} 1x`,
           query: "",
         },
       ],
@@ -61,11 +60,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${until2x}, ${until2x} 2x`,
+          src: `${until4x}, ${until4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${until4x}, ${until4x} 1x`,
+          src: `${until2x}, ${until2x} 1x`,
           query: "",
         },
       ],
@@ -78,11 +77,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${hence2x}, ${hence2x} 2x`,
+          src: `${hence4x}, ${hence4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${hence4x}, ${hence4x} 1x`,
+          src: `${hence2x}, ${hence2x} 1x`,
           query: "",
         },
       ],
@@ -95,11 +94,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${halfway2x}, ${halfway2x} 2x`,
+          src: `${halfway4x}, ${halfway4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${halfway4x}, ${halfway4x} 1x`,
+          src: `${halfway2x}, ${halfway2x} 1x`,
           query: "",
         },
       ],
@@ -112,11 +111,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${respectfulVilain2x}, ${respectfulVilain2x} 2x`,
+          src: `${respectfulVilain4x}, ${respectfulVilain4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${respectfulVilain4x}, ${respectfulVilain4x} 1x`,
+          src: `${respectfulVilain2x}, ${respectfulVilain2x} 1x`,
           query: "",
         },
       ],
@@ -129,11 +128,11 @@ export const cardsList = [
     imageSet: baseImage(
       [
         {
-          src: `${writeAbout2x}, ${writeAbout2x} 2x`,
+          src: `${writeAbout4x}, ${writeAbout4x} 2x`,
           query: "(max-width: 767px)",
         },
         {
-          src: `${writeAbout4x}, ${writeAbout4x} 1x`,
+          src: `${writeAbout2x}, ${writeAbout2x} 1x`,
           query: "",
         },
       ],

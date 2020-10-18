@@ -10,7 +10,6 @@
             {{ entryArticle.description }}
           </h2>
           <ResponsiveImage
-            lazyload="false"
             imgClass="header-image"
             :sources="entryArticle.imageSet.src"
             :alt="entryArticle.imageSet.alt"
