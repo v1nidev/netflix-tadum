@@ -1,5 +1,5 @@
 <template>
-  <main class="eu-e-meus-amores is-clipped p-b-32 p-l-16 p-r-16">
+  <main class="eu-e-meus-amores is-clipped p-l-16 p-r-16">
     <div class="container">
       <h1 class="title">
         {{ title }}
