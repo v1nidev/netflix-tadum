@@ -44,7 +44,9 @@
         <img src="/images/com-tempo-irmao/detox.svg" alt="detox digital">
       
         <div class="dive has-text-centered m-x-a m-t-32">
-          <h3 class="p-y-20 dive-title m-b-0">Mergulhe+!</h3>
+          <h3 class="p-y-20 dive-title m-b-0">
+            Mergulhe+!
+          </h3>
           <p class="p-y-32 p-x-48 dashed-bottom dive-description m-b-0">
             + de 60 anos nas costas ajudando a gente com um mar de passatempos <br> @coquetel
           </p>
