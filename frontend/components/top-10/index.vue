@@ -142,6 +142,10 @@ export default {
       margin: 0;
     }
   }
+  .lists {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
   h4 {
     font-family: "Netflix Sans";
     font-style: normal;
