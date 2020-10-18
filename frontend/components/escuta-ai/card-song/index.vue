@@ -107,7 +107,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 258px;
+    height: 284px;
     p {
       color: $black;
       font-family: "Grennete Pro";
