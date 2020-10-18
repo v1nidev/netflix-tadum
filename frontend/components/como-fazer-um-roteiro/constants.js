@@ -23,7 +23,7 @@ export const entryArticle = {
   imageSet: baseImage(
     [
       {
-        src: `${animatedGif2x}, ${animatedGif2x} 2x`,
+        src: `${animatedGif2x}, ${animatedGif2x} 1x`,
         query: "(max-width: 767px)",
       },
       {

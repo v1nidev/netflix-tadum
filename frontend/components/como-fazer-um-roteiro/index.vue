@@ -1,7 +1,7 @@
 <template>
   <main class="como-fazer-um-roteiro is-clipped">
     <div class="container">
-      <article class="box-container has-background-black">
+      <article class="box-container has-background-black entry">
         <section class="section-container">
           <h1 class="title has-text-pink">
             {{ entryArticle.headerText }}
@@ -10,11 +10,12 @@
             {{ entryArticle.description }}
           </h2>
           <ResponsiveImage
+            lazyload="false"
+            imgClass="header-image"
             :sources="entryArticle.imageSet.src"
-            :lazyload="false"
             :alt="entryArticle.imageSet.alt"
           />
-          <header class="section-header-text entry">
+          <header class="section-footer-text">
             {{ entryArticle.footerText }}
           </header>
         </section>
@@ -91,6 +92,18 @@ export default {
         border: 1.2px solid black;
         max-width: 95%;
       }
+
+      & img.header-image {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      &.entry {
+        margin: 0 25px;
+      }
     }
   }
 
@@ -115,6 +128,17 @@ export default {
 
   & .section-container {
     margin: auto;
+
+    & .section-footer-text {
+      padding: 40px 20px;
+      font-size: 17px;
+      font-family: Grennete Pro;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+
     & .section-header-text {
       padding: 25px 8px $size-5;
       font-size: 17px;
@@ -132,16 +156,24 @@ export default {
       }
 
       &.loose {
+        margin: auto;
         max-width: 750px;
         padding-bottom: 20px;
       }
 
       @media (min-width: $tablet) {
-        margin: 25px auto $size-5;
+        padding: 25px $size-5;
+        &.loose {
+          padding-bottom: 0;
+        }
       }
 
       @media (min-width: $desktop) {
-        padding: 0  $size-5;
+        padding: 0 $size-5;
+        &.loose {
+          margin-bottom: 0;
+          padding-bottom: 20px;
+        }
       }
     }
   }
