@@ -708,6 +708,7 @@ section {
       width: 98% !important;
       left: 0;
       top: -18%;
+      pointer-events: none;
     }
     @include from(375px) {
       & .star {
