@@ -17,5 +17,8 @@ pipelines:
           name: Send files to server the9level
           image: google/cloud-sdk:latest
           script: 
-            - scp -r frontend/dist/* cielo@34.74.113.161:/var/www/projects/the9/lv101
+            - echo $GCLOUD_API_KEYFILE > ~/.gcloud-api-key.json
+            - gcloud auth activate-service-account --key-file ~/.gcloud-api-key.json
+            - gcloud config set project $GCLOUD_PROJECT
+            - gcloud compute scp --recurse frontend/dist/* cielo:/var/www/projects/the9/lv101 --zone $GCLOUD_ZONE
     
