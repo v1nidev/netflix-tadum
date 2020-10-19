@@ -155,7 +155,7 @@
       <h2>Colo meu ouvido <br />num radinho</h2>
       <div class="video-dustin image-sub">
         <div>
-          <VideoFrame video-id="9_LoWFgYaUI" style="height: 194px" />
+          <VideoFrame video-id="9_LoWFgYaUI" />
           <p>
             Na década de 1980, os namoros ainda não eram na internet, mas já
             rolava cobrança
@@ -347,6 +347,12 @@ export default {
     background-color: $yellow;
     padding: 9px 14px;
   }
+
+  @include from(768px) {
+    & p {
+      padding: 32px 14px;
+    }
+  }
 }
 
 .eu-e-vc {
@@ -387,6 +393,8 @@ export default {
       border: 1px solid $black;
       vertical-align: middle;
       position: absolute;
+      text-align: center;
+      letter-spacing: 0;
       line-height: 52px;
       border-radius: 50%;
       font-size: 42px;
@@ -413,6 +421,10 @@ export default {
     line-height: 21px;
     letter-spacing: -0.01em;
     color: $black;
+    @include from(768px) {
+      font-size: 22px;
+      line-height: 25px;
+    }
   }
   hr {
     margin: 35px 0;
@@ -439,7 +451,7 @@ export default {
   }
   & .image1 {
     margin-top: 21px;
-    margin-bottom: 24px;
+    margin-bottom: 34px;
     position: relative;
     & > div {
       @include image-box(50);
@@ -481,6 +493,23 @@ export default {
     & p {
       margin-top: -7px;
     }
+    & /deep/.video-frame {
+      height: 194px;
+      width: 100%;
+      & video,
+      & iframe {
+        width: 100%;
+      }
+      @include from(400px) {
+        height: 260px;
+      }
+      @include from(768px) {
+        height: 420px;
+      }
+      @include from(1000px) {
+        height: 520px;
+      }
+    }
   }
   & .ele-viu {
     background-color: $white;
@@ -496,6 +525,9 @@ export default {
       letter-spacing: -0.02em;
       color: $black;
       margin-bottom: 19px;
+      @include from(768px) {
+        font-size: 90px;
+      }
     }
     p {
       font-family: "Grennete Pro";
@@ -511,6 +543,9 @@ export default {
     & .image3 {
       & > img {
         position: absolute;
+      }
+      & > div {
+        @include image-box(20);
       }
     }
   }
