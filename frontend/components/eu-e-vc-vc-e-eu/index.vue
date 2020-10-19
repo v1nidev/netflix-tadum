@@ -3,12 +3,18 @@
     <div class="container">
       <h4>EU E VC, VC E EU...</h4>
       <h1>SDV é <br />quase amor!</h1>
-      <div class="image1">
-        <img src="/images/eu-e-vc-vc-e-eu/rt.png" alt="RT" class="rt" />
-        <img
-          src="/images/eu-e-vc-vc-e-eu/selfie.png"
-          alt="Selfie"
-          class="selfie"
+      <section class="image1">
+        <ResponsiveImage
+          :sources="rtMini.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="rt float-img"
+        />
+        <ResponsiveImage
+          :sources="selfie.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="selfie float-img"
         />
         <!-- resize the page -->
         <div>
@@ -18,7 +24,7 @@
             :alt="image.alt"
           />
         </div>
-      </div>
+      </section>
       <p>
         Quem nunca postou foto, vídeo, deu um like ou aquela stalkeadinha básica
         no crush? Nas séries e nos filmes, é assim tb, olha só!
@@ -28,10 +34,25 @@
         Clicou, <br />
         tá namorando
       </h2>
-      <div class="image2 image-sub">
-        <img src="/images/eu-e-vc-vc-e-eu/star3.png" alt="Stars" />
-        <img src="/images/eu-e-vc-vc-e-eu/ele.png" alt="Ele" />
-        <img src="/images/eu-e-vc-vc-e-eu/star2.png" alt="Stars" />
+      <section class="image2 image-sub">
+        <ResponsiveImage
+          :sources="img2StarLeft.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="star-left float-img"
+        />
+        <ResponsiveImage
+          :sources="img2StarRight.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="star-right float-img"
+        />
+        <ResponsiveImage
+          :sources="ele.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="ele float-img"
+        />
         <!-- resize the page -->
         <div class="box-image">
           <ResponsiveImage
@@ -44,7 +65,7 @@
             o boy
           </p>
         </div>
-      </div>
+      </section>
       <p>
         Beijo, chamego, amasso y otras cositas más são ótimos. Mas, qdo a gte
         quer saber se o lance é pra valer, tem q ter o atestado das redes
@@ -66,7 +87,7 @@
         :alt="rt.alt"
         class="rt-image"
       />
-      <div class="ele-viu">
+      <section class="ele-viu">
         <h3>Ele viu!</h3>
         <p>
           Que atire o primeiro celular quem nunca deu um like ou postou alguma
@@ -75,22 +96,25 @@
           vídeo e postar no TikTok só pra ver se o Paxton visualizava.
         </p>
         <div class="image3">
-          <img
-            src="/images/eu-e-vc-vc-e-eu/star3.png"
-            alt="Stars"
-            class="start3"
+          <ResponsiveImage
+            :sources="img3StarRight.src"
+            :lazyload="false"
+            :alt="image.alt"
+            class="star-right float-img"
           />
-          <img
-            src="/images/eu-e-vc-vc-e-eu/single-star.png"
-            alt="Stars"
-            class="star1-left"
+          <ResponsiveImage
+            :sources="singleStar.src"
+            :lazyload="false"
+            :alt="image.alt"
+            class="single-star-right float-img"
           />
-          <img
-            src="/images/eu-e-vc-vc-e-eu/single-star.png"
-            alt="Stars"
-            class="star-right"
+          <ResponsiveImage
+            :sources="singleStar.src"
+            :lazyload="false"
+            :alt="image.alt"
+            class="single-star-left float-img"
           />
-          <div>
+          <div class="box-image">
             <ResponsiveImage
               :sources="image3.src"
               :lazyload="false"
@@ -98,34 +122,15 @@
             />
           </div>
         </div>
-      </div>
+      </section>
       <hr />
       <h2>O amor tá offline</h2>
-      <div class="image4 image-sub">
-        <img
-          src="/images/eu-e-vc-vc-e-eu/star1.png"
-          alt="Stars"
-          class="stars-group"
-        />
-        <img
-          src="/images/eu-e-vc-vc-e-eu/single-star.png"
-          alt="Stars"
-          class="star-left"
-        />
-        <img
-          src="/images/eu-e-vc-vc-e-eu/single-star.png"
-          alt="Stars"
-          class="star-right"
-        />
-        <img
-          src="/images/eu-e-vc-vc-e-eu/single-star.png"
-          alt="Stars"
-          class="star-small1"
-        />
-        <img
-          src="/images/eu-e-vc-vc-e-eu/single-star.png"
-          alt="Stars"
-          class="star-small2"
+      <section class="image4 image-sub">
+        <ResponsiveImage
+          :sources="img4StarRight.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="star float-img"
         />
         <!-- resize the page -->
         <div class="box-image">
@@ -139,7 +144,7 @@
             já é too much
           </p>
         </div>
-      </div>
+      </section>
       <p>
         Sabe qdo alguém posta tanta, mas tanta foto com o boy que a gte até
         desconfia? Pois é, selfie demais pode ser amor de menos. Qdo a gte tá in
@@ -153,7 +158,13 @@
       </p>
       <hr />
       <h2>Colo meu ouvido <br />num radinho</h2>
-      <div class="video-dustin image-sub">
+      <section class="video-dustin image-sub">
+        <ResponsiveImage
+          :sources="videoStar.src"
+          :lazyload="false"
+          :alt="image.alt"
+          class="star float-img"
+        />
         <div>
           <VideoFrame video-id="9_LoWFgYaUI" />
           <p>
@@ -161,7 +172,7 @@
             rolava cobrança
           </p>
         </div>
-      </div>
+      </section>
       <hr />
       <p>
         Não culpe só a internet. Mesmo quando tudo ainda era mato e rede servia
@@ -208,7 +219,7 @@ export default {
         [
           {
             src: "/images/eu-e-vc-vc-e-eu/image1-mobile.jpg",
-            query: "(max-width: 768px)",
+            query: "(max-width: 767px)",
           },
           {
             src: "/images/eu-e-vc-vc-e-eu/image1-desktop.jpg",
@@ -221,7 +232,7 @@ export default {
         [
           {
             src: "/images/eu-e-vc-vc-e-eu/image2-mobile.jpg",
-            query: "(max-width: 768px)",
+            query: "(max-width: 767px)",
           },
           {
             src: "/images/eu-e-vc-vc-e-eu/image2-desktop.jpg",
@@ -234,7 +245,7 @@ export default {
         [
           {
             src: "/images/eu-e-vc-vc-e-eu/image3-mobile.jpg",
-            query: "(max-width: 768px)",
+            query: "(max-width: 767px)",
           },
           {
             src: "/images/eu-e-vc-vc-e-eu/image3-desktop.jpg",
@@ -247,7 +258,7 @@ export default {
         [
           {
             src: "/images/eu-e-vc-vc-e-eu/image4-mobile.jpg",
-            query: "(max-width: 768px)",
+            query: "(max-width: 767px)",
           },
           {
             src: "/images/eu-e-vc-vc-e-eu/image4-desktop.jpg",
@@ -260,7 +271,7 @@ export default {
         [
           {
             src: "/images/eu-e-vc-vc-e-eu/rt-mobile.png",
-            query: "(max-width: 768px)",
+            query: "(max-width: 767px)",
           },
           {
             src: "/images/eu-e-vc-vc-e-eu/rt-desktop.png",
@@ -268,6 +279,123 @@ export default {
           },
         ],
         "RT"
+      ),
+      img2StarLeft: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image2-star-left-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image2-star-left-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
+      ),
+      img2StarRight: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image2-star-right-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image2-star-right-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
+      ),
+      ele: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/ele-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/ele-desktop.png",
+            query: "",
+          },
+        ],
+        "Ele"
+      ),
+      rtMini: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/rt-mini-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/rt-mini-desktop.png",
+            query: "",
+          },
+        ],
+        "RT"
+      ),
+      selfie: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/selfie-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/selfie-desktop.png",
+            query: "",
+          },
+        ],
+        "Selfie"
+      ),
+      img3StarRight: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image3-star-right-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image3-star-right-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
+      ),
+      img4StarRight: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image4-star-right-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/image4-star-right-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
+      ),
+      singleStar: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/single-star-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/single-star-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
+      ),
+      videoStar: baseImage(
+        [
+          {
+            src: "/images/eu-e-vc-vc-e-eu/video-star-mobile.png",
+            query: "(max-width: 767px)",
+          },
+          {
+            src: "/images/eu-e-vc-vc-e-eu/video-star-desktop.png",
+            query: "",
+          },
+        ],
+        "Star"
       ),
     };
   },
@@ -312,13 +440,27 @@ export default {
     display: block;
     width: 100%;
   }
+  &.float-img {
+    position: absolute;
+    width: auto !important;
+    z-index: 2;
+    & img {
+      width: 100% !important;
+    }
+  }
   &.rt-image {
     & img {
       display: inline-block;
       text-align: center;
-      max-width: 700px !important;
+      max-width: 500px !important;
     }
   }
+}
+
+section {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin image-box($radius-box) {
@@ -327,20 +469,18 @@ export default {
   overflow: hidden;
   border: 1.2px solid $black;
   box-sizing: border-box;
-  box-shadow: 0px 0px 0px 10px black inset;
   border-radius: #{$radius-box}$unit;
+  box-shadow: 0px 0px 0px 8px black inset;
 }
 
 .image-sub {
-  $unit: unquote("px");
   position: relative;
-  overflow: hidden;
-  border: 1.2px solid $black;
-  box-sizing: border-box;
-  /* box-shadow: 0px 0px 0px 10px black inset; */
-  border-radius: 20px;
+  & > div {
+    @include image-box(20);
+  }
   & > img {
     position: absolute;
+    display: block;
   }
 
   & p {
@@ -350,7 +490,7 @@ export default {
 
   @include from(768px) {
     & p {
-      padding: 32px 14px;
+      padding: 32px 24px;
     }
   }
 }
@@ -422,8 +562,8 @@ export default {
     letter-spacing: -0.01em;
     color: $black;
     @include from(768px) {
-      font-size: 22px;
-      line-height: 25px;
+      font-size: 24px;
+      line-height: 28px;
     }
   }
   hr {
@@ -462,7 +602,6 @@ export default {
       position: absolute;
       transform: scale(0.7);
       transform-origin: center;
-      z-index: 10;
     }
     & .rt {
       left: 2%;
@@ -482,33 +621,27 @@ export default {
         transform: scale(1);
       }
     }
+    @include from($tablet) {
+      & .rt {
+        transform: scale(1) translateY(-45%);
+        left: 1%;
+      }
+    }
   }
   & .image2 {
     margin-bottom: 31px;
-  }
-  & .image4 {
-    margin-bottom: 31px;
-  }
-  & .video-dustin {
-    & p {
-      margin-top: -7px;
+    position: relative;
+    & .star-left {
+      left: 0;
+      transform: translateY(-20%);
     }
-    & /deep/.video-frame {
-      height: 194px;
-      width: 100%;
-      & video,
-      & iframe {
-        width: 100%;
-      }
-      @include from(400px) {
-        height: 260px;
-      }
-      @include from(768px) {
-        height: 420px;
-      }
-      @include from(1000px) {
-        height: 520px;
-      }
+    & .ele {
+      right: 1%;
+      transform: translateY(-34%);
+    }
+    & .star-right {
+      right: -12px;
+      bottom: 6px;
     }
   }
   & .ele-viu {
@@ -541,11 +674,66 @@ export default {
     }
     margin-top: 51px;
     & .image3 {
-      & > img {
-        position: absolute;
-      }
+      position: relative;
       & > div {
         @include image-box(20);
+      }
+      & .star-right {
+        top: -1%;
+        right: 0;
+      }
+      & .single-star-right {
+        bottom: 20%;
+        right: 26%;
+      }
+      & .single-star-left {
+        top: 10%;
+        left: 1%;
+      }
+    }
+  }
+  & .image4 {
+    margin-bottom: 31px;
+    & .star {
+      width: 90% !important;
+      top: -14%;
+      left: 6%;
+    }
+  }
+  & .video-dustin {
+    & p {
+      margin-top: -7px;
+    }
+    & .star {
+      width: 98% !important;
+      left: 0;
+      top: -18%;
+    }
+    @include from(375px) {
+      & .star {
+        top: -24%;
+      }
+    }
+    @include from(1024px) {
+      & .star {
+        top: -14%;
+      }
+    }
+    & /deep/.video-frame {
+      height: 194px;
+      width: 100%;
+      & video,
+      & iframe {
+        width: 100%;
+      }
+      @include from(400px) {
+        height: 260px;
+      }
+      @include from(768px) {
+        height: 420px;
+      }
+      @include from(1000px) {
+        height: 520px;
       }
     }
   }
