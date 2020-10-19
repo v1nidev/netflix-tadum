@@ -95,17 +95,17 @@ export default {
     cards: [
       {
         image: baseImage([
-          {src:'/images/emicida/section2/mobile-1.png, /images/emicida/section2/mobile-1@2x.png 2x', query: '(max-width: 1023px)'},
-          {src:'/images/emicida/section2/desktop-1.png, /images/emicida/section2/desktop-1@2x.png 2x', query: ''}
+          {src:'/images/emicida/follow/card1/mobile.png, /images/emicida/follow/card1/mobile@2x.png 2x', query: '(max-width: 1023px)'},
+          {src:'/images/emicida/follow/card1/desktop.png, /images/emicida/follow/card1/desktop@2x.png 2x', query: ''}
         ], ''),
-        description: 'Taco Chronicles “Eu amo. A gente, quando  sai em turnê, vai comer nos lugares e fica filmando, brincando de fazer esses  programas aí. Hahaha.”'
+        description: '<u>Taco Chronicles</u> “Eu amo. A gente, quando  sai em turnê, vai comer nos lugares e fica filmando, brincando de fazer esses  programas aí. Hahaha.”'
       },
       {
         image: baseImage([
-          {src:'/images/emicida/section2/mobile-1.png, /images/emicida/section2/mobile-1@2x.png 2x', query: '(max-width: 1023px)'},
-          {src:'/images/emicida/section2/desktop-1.png, /images/emicida/section2/desktop-1@2x.png 2x', query: ''}
+          {src:'/images/emicida/follow/card2/mobile.png, /images/emicida/follow/card2/mobile@2x.png 2x', query: '(max-width: 1023px)'},
+          {src:'/images/emicida/follow/card2/desktop.png, /images/emicida/follow/card2/desktop@2x.png 2x', query: ''}
         ], ''),
-        description: 'Grace Passô, Fabiana Cozza, Thiago Jamelão. “A Grace é o teatro vivo; a Fabiana é o elo com tudo de mais bonito que a experiência brasiliana já produziu quando falamos de linguagem musical; e Thiago Jamelão, embora novo e ainda bastante desconhecido, tem potencial e bagagem para ser um grande mestre e, se fizer as lições de casa direitinho, vai conseguir.”'
+        description: '<u>Grace Passô, Fabiana Cozza, Thiago Jamelão</u>. “A Grace é o teatro vivo; a Fabiana é o elo com tudo de mais bonito que a experiência brasiliana já produziu quando falamos de linguagem musical; e Thiago Jamelão, embora novo e ainda bastante desconhecido, tem potencial e bagagem para ser um grande mestre e, se fizer as lições de casa direitinho, vai conseguir.”'
       }
     ]
   },
