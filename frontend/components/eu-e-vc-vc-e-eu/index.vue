@@ -523,6 +523,7 @@ section {
     border: 1.2px solid $black;
     border-radius: 50px;
     position: relative;
+    width: 100%;
     &:before {
       content: "1";
       color: $black;
@@ -544,6 +545,9 @@ section {
     @include from(400px) {
       padding: 42px 11px;
       font-size: 77px;
+    }
+    @include from(426px) {
+      width: auto;
     }
     @include from($tablet) {
       padding: 62px 51px;
@@ -600,18 +604,18 @@ section {
     & .rt,
     & .selfie {
       position: absolute;
-      transform: scale(0.7);
+      transform: scale(0.85);
       transform-origin: center;
     }
     & .rt {
       left: 2%;
-      transform: scale(0.7) translateY(-65%);
+      transform: scale(0.85) translateY(-65%);
       top: 0;
     }
     & .selfie {
       right: 5%;
-      bottom: -30px;
-      transform: scale(0.7);
+      bottom: -20px;
+      transform: scale(0.8);
     }
     @include from(400px) {
       & .rt {
