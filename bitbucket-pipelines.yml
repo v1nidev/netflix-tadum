@@ -1,0 +1,24 @@
+image: node:12.18.2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          name: Prepare environment and build
+          script: 
+            - cd frontend
+            - yarn install
+            - yarn run generate
+          artifacts:
+            - frontend/dist/**
+      - step:
+          name: Send files to server the9level
+          image: google/cloud-sdk:latest
+          script: 
+            - echo $GCLOUD_API_KEYFILE > ~/.gcloud-api-key.json
+            - gcloud auth activate-service-account --key-file ~/.gcloud-api-key.json
+            - gcloud config set project $GCLOUD_PROJECT
+            - gcloud compute scp --recurse frontend/dist/* the9default-1:/var/www/projects/the9/lv101 --zone $GCLOUD_ZONE
+    
