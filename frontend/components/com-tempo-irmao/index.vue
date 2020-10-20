@@ -15,11 +15,14 @@
       <section>
         <div class="card m-x-a m-b-16">
           <ResponsiveImage 
-            :sources="[{src:'/images/com-tempo-irmao/larissa.png, /images/com-tempo-irmao/larissa@2x.png'}]"
+            :sources="[
+              {src:'/images/com-tempo-irmao/larissa.png, /images/com-tempo-irmao/larissa@2x.png', query: '(max-width: 1023px)'},
+              {src:'/images/com-tempo-irmao/larissa_desktop.png, /images/com-tempo-irmao/larissa_desktop@2x.png'},
+            ]"
             :alt="'Larissa'" 
           />
 
-          <p class="description has-background-green has-text-centered p-x-16 p-t-8 p-b-16">
+          <p class="description has-background-green has-text-centered p-x-16 p-y-16 p-t-8-touch">
             Ninguém sabia que passaríamos tanto tempo em casa esse ano. Resta a gente se inspirar em Ana, de Modo Avião, que ficou na casa do avô  pra  encontrar umas ocupações nessa quarentena infinita... 
           </p>
         </div>
@@ -152,11 +155,14 @@ export default {
 }
 
 .card{
-  max-width: 375px;
   width: 100%;
   border: 2px solid #000000;
   background-color: #000;
   border-radius: 6px;
+
+  @include touch{
+    max-width: 375px;
+  }
 
   .larissa{
     height: 250px;
@@ -235,9 +241,15 @@ export default {
 
   .dive{
     background-color: #FCF1E5;
-    width: 375px;
+    //width: 375px;
     border-radius: 20px;
     border: 2px solid #000000;
+    width: 100%;
+
+    @include touch{
+      max-width: 375px;
+    }
+    
 
     &-title{
       background-color: #BDBEBF;
