@@ -54,10 +54,10 @@
             Mergulhe+!
           </h3>
           <p class="p-y-32 p-x-48 dashed-bottom dive-description m-b-0">
-            + de 60 anos nas costas ajudando a gente com um mar de passatempos <br> @coquetel
+            + de 60 anos nas costas ajudando a gente com um mar de passatempos <br> <a href="https://www.instagram.com/coquetel/?hl=pt-br"> @coquetel </a>
           </p>
           <p class="p-y-32 p-x-48 dive-description">
-            clássico dos clássicos, pioneira no rolê dos baralhos no Brasil. Se vc não conhece Uno, procure saber ;) <br> @copagoficial
+            clássico dos clássicos, pioneira no rolê dos baralhos no Brasil. Se vc não conhece Uno, procure saber ;) <br> <a href="https://www.instagram.com/copagoficial/?hl=pt-br"> @copagoficial </a>
           </p>
         </div>
       </section>
@@ -328,8 +328,13 @@ export default {
 </style>
 
 <style lang="scss">
+// Scroll to top customization
 .scroll-top-btn {
-  background: #00A651;;
+  background: #00A651;
+  border-color: #000000;
+}
+.scroll-top-btn .icon{
+  stroke: #000000;
 }
 
 </style>
