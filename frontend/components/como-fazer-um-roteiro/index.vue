@@ -1,30 +1,30 @@
 <template>
   <main class="como-fazer-um-roteiro is-clipped">
-    <div class="container">
-      <article class="box-container has-background-black entry">
-        <section class="section-container">
-          <h1 class="title has-text-pink">
-            {{ entryArticle.headerText }}
-          </h1>
-          <h2 class="description has-text-pink">
-            {{ entryArticle.description }}
-          </h2>
-          <ResponsiveImage
-            imgClass="header-image"
-            :sources="entryArticle.imageSet.src"
-            :alt="entryArticle.imageSet.alt"
-          />
-          <header class="section-footer-text">
-            {{ entryArticle.footerText }}
-          </header>
-        </section>
-        <section class="section-container has-background-pink m-0-a">
-          <header class="section-header-text entry has-text-black loose">
-            {{ entryArticle.looseText }}
-          </header>
-        </section>
-      </article>
+    <article class="box-container has-background-black entry">
+      <section class="section-container">
+        <h1 class="title has-text-pink">
+          {{ entryArticle.headerText }}
+        </h1>
+        <h2 class="description has-text-pink">
+          {{ entryArticle.description }}
+        </h2>
+        <ResponsiveImage
+          imgClass="header-image"
+          :sources="entryArticle.imageSet.src"
+          :alt="entryArticle.imageSet.alt"
+        />
+        <header class="section-footer-text has-text-pink">
+          {{ entryArticle.footerText }}
+        </header>
+      </section>
+      <section class="section-container has-background-pink m-0-a">
+        <header class="section-header-text entry has-text-black loose">
+          {{ entryArticle.looseText }}
+        </header>
+      </section>
+    </article>
 
+    <div class="container">
       <CardsList :cardsList="cardsList" />
 
       <KnowledgeList :knowledgeInfo="forUrKnowledge" />
@@ -80,14 +80,20 @@ export default {
   background-color: $pink;
 
   & .container {
-    padding: 0 !important;
+    padding: 1rem !important;
     color: $pink;
+
+    @media (min-width: $desktop) {
+      margin: auto;
+      & > div {
+        max-width: 667px;
+      }
+    }
   }
 
   & /deep/.box-container {
     & picture {
       display: block;
-      padding: 0 1rem;
 
       & img {
         border-radius: $size-7;
@@ -95,13 +101,9 @@ export default {
       }
 
       & img.header-image {
+        border-radius: 0;
         margin: auto;
-      }
-    }
-
-    @media (min-width: $tablet) {
-      &.entry {
-        margin: 0 25px;
+        width: 100%;
       }
     }
   }

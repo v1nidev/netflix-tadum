@@ -1,5 +1,5 @@
 <template>
-  <div class="cards-container">
+  <div class="cards-container" style="margin: auto;">
     <article class="box-container has-background-pink" v-for="(card, i) in cardsList" :key="i">
       <section class="section-container">
         <ResponsiveImage
@@ -37,9 +37,13 @@ export default {
   padding-top: 20px;
   color: black;
 
+  @media (min-width: $desktop) {
+    padding-top: 0;
+  }
+
   &:before {
     display: block;
-    margin: 0 25px 20px;
+    margin: 0 0 20px;
     background: #808080;
     border-top: 1.5px dashed black;
     content: '';
@@ -47,6 +51,10 @@ export default {
 
   &:not(:last-child) {
     margin-bottom: 60px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
   }
 
   & .section-header-text-in-a-box {
@@ -65,7 +73,7 @@ export default {
   }
 
   & .section-footer-text {
-    padding: 20px 2.625rem;
+    padding: 20px 0;
     text-align: left;
     font-size: 17px;
     font-family: Grennete Pro;

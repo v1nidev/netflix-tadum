@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="knowledge-container" style="margin: auto;">
     <article class="box-container has-background-pink">
       <section>
         <header class="section-header-text-in-a-box">
@@ -28,7 +28,7 @@ export default {
 @import "~assets/css/overrides";
 
 .box-container {
-  margin: 50px 20px 0;
+  margin: 50px 0 0;
   color: black;
   border: 1.5px solid black;
   border-radius: 20px;
@@ -37,6 +37,10 @@ export default {
     border-top: 1.5px dashed black;
     border-bottom: 1.5px dashed black;
     padding: 20px;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   & .section-header-text-in-a-box {

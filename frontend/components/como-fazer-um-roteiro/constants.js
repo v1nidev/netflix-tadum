@@ -151,25 +151,25 @@ export const forUrKnowledge = {
       text: "ANTAGONISTA <br/> cada uma das forças ou personagensque atrapalham a protagonista durante a história.",
     },
     {
-      text: "ALTER <br/>- EGO é uma segunda versão de vc, q vira personagem na história. Tb pode ser um duplo da protagonista.",
+      text: "ALTER - EGO <br/> é uma segunda versão de vc, q vira personagem na história. Tb pode ser um duplo da protagonista.",
     },
     {
-      text: "MUNDO <br/> COMUM é a parte inicial da narrativa, qdo as personagens e o mundo onde vivem são apresentados.",
+      text: "MUNDO COMUM <br/> é a parte inicial da narrativa, qdo as personagens e o mundo onde vivem são apresentados.",
     },
     {
-      text: "INCIDENTE <br/> INCITANTE é aquele acontecimento q tira as coisas do lugar e dá início à história.",
+      text: "INCIDENTE INCITANTE <br/> é aquele acontecimento q tira as coisas do lugar e dá início à história.",
     },
     {
-      text: "CONFLITO <br/> INTERNO são as motivações psicológicas da personagem, aquilo que dá sentido à existência dela.",
+      text: "CONFLITO INTERNO <br/> são as motivações psicológicas da personagem, aquilo que dá sentido à existência dela.",
     },
     {
-      text: "CONFLITO <br/> EXTERNO é aquilo que a personagem acha que precisa. Tipo: salvar o mundo.",
+      text: "CONFLITO EXTERNO <br/> é aquilo que a personagem acha que precisa. Tipo: salvar o mundo.",
     },
     {
-      text: "LOW <br/> POINT é o momento em que a protagonista está mais fraca, ou seja, mais distante da solução dos seus conflitos.",
+      text: "LOW POINT <br/> é o momento em que a protagonista está mais fraca, ou seja, mais distante da solução dos seus conflitos.",
     },
     {
-      text: "PLOT <br/> TWIST é aquele momento em que a gente, como espectador, se surpreende pq tudo muda.",
+      text: "PLOT TWIST <br/> é aquele momento em que a gente, como espectador, se surpreende pq tudo muda.",
     },
     {
       text: "CLÍMAX <br/> é o momento de maior tensão da história, qdo a protagonista está prestes a resolver seu conflito, mas a antagonista está fazendo o máximo para impedir q isso aconteça.",
