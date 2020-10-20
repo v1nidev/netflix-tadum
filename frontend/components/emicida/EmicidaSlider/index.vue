@@ -2,7 +2,7 @@
   <CardSlider :queries="slider_config" class="m-b-50 columns is-mobile is-flex is-centered">
     <div v-for="(card, index) in content" :key="index" class="column is-narrow slider-item p-12">
       <div class="generic-card">
-        <ResponsiveImage :sources="card.image.src" :lazyload="false" />
+        <ResponsiveImage :sources="card.image.src" :lazyload="false" alt="" />
         <span v-html="card.caption" />
       </div>
     </div>

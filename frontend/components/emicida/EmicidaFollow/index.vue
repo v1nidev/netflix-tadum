@@ -6,7 +6,7 @@
       <div class="follow-holder m-x-a">
         <div v-for="(card, index) in content.cards" :key="index">
           <div class="generic-card">
-            <ResponsiveImage :sources="card.image.src" :lazyload="false" />
+            <ResponsiveImage :sources="card.image.src" :lazyload="false" alt="" />
             <p class="has-text-centered-mobile m-l-12-touch m-l-24" v-html="card.description" />
           </div>
         </div>

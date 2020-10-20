@@ -12,14 +12,7 @@
         :key="index"
         :content="p"
       />
-      <div class="Image-box__wrapper columns m-t-48 m-t-32-touch m-b-60-touch is-flex is-centered">
-        <div class="Image-box column is-narrow p-0">
-          <ResponsiveImage :sources="content.section1.image.src" :lazyload="false" :alt="content.section1.image.alt" />
-          <div class="Image-box__caption has-text-centered p-y-12">
-            <span v-html="content.section1.image.alt" />
-          </div>
-        </div>
-      </div>
+      <ScrollChangeableImage :content="content.section1.image" />
     </section>
 
     <section class="Section-two section p-t-0-touch p-b-32 p-b-24-touch">
@@ -34,7 +27,7 @@
     <section class="Video-section section p-t-0">
       <Paragraph
         v-for="(p, index) in content.videoSection.textContents"
-        :key="index"
+        :key="`1 ${index}`"
         :content="p"
         :class="{'b-t-dashed p-t-12': index === 0}"
       />
@@ -43,7 +36,7 @@
       </div>
       <Paragraph
         v-for="(p, index) in content.videoSection.textContents2"
-        :key="index"
+        :key="`2 ${index}`"
         :content="p"
         :class="{'b-t-dashed p-t-12': index === 0}"
       />
@@ -54,7 +47,11 @@
     <footer class="section m-b-24">
       <h4 class="has-text-centered is-font-netflix is-uppercase" v-html="content.footer.title" />
       <div class="Footer-social columns is-flex is-centered m-t-8">
-        <div v-for="(s, index) in content.footer.social" :key="index" class="m-x-4 p-0 m-y-4 column is-narrow has-text-centered">
+        <div 
+          class="m-x-4 p-0 m-y-4 column is-narrow has-text-centered"
+          v-for="(s, index) in content.footer.social" 
+          :key="index" 
+        >
           <AppLink 
             class="button p-x-12"
             target="_blank"
@@ -120,26 +117,6 @@ body {
       border-top: 1px dashed #000;
     }
   }
-}
-
-.Image-box {
-  border: 3px solid #000;
-  border-radius: 25px;
-  overflow: hidden;
-
-  /deep/img {
-    vertical-align: bottom;
-  }
-
-  &__caption {
-    border-top: 3px solid #000;
-    background: $gray-light;
-  }
-
-  @include touch {
-    max-width: 364px;
-  }
-
 }
 
 .Section-one {

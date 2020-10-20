@@ -11,7 +11,7 @@
 export default {
   props: {
     content: {
-      type: Array,
+      type: Object || Array,
       required: true
     }
   },
