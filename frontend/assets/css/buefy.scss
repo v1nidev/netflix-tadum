@@ -173,5 +173,11 @@ html, body{
   max-width: 1011px !important;
 }
 
+// .nuxt-link-exact-active {
+//   cursor: default;
+// }
+
+.home-enter-active, .home-leave-active { transition: opacity .5s; }
+.home-enter, .home-leave-active { opacity: 0; }
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

@@ -1,5 +1,5 @@
 <template>
-  <component v-if="component" :is="component">
+  <component v-if="component" :is="component" v-bind="{...$attrs, ...$props}">
     <!-- <br> -->
   </component>  
 </template>

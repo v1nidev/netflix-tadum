@@ -24,9 +24,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  mounted(){
-    console.log(this.$props.cards)
   }
 }
 </script>

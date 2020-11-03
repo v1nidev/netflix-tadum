@@ -1,7 +1,7 @@
 <template>
   <main class="mistery m-0-a p-t-8">
     <slot />
-    <div class="head-container container">
+    <div v-if="showHead" class="head-container container">
       <MisterioFelipeCastanhariHead />
     </div>
     <div v-if="showBody" class="body">
@@ -131,13 +131,17 @@ export default {
   head () {
     return this.$createHeadFunction(
       {
-        title: 'internal page',
-        description: 'internal page desc'
+        title: 'Mistério Felipe Castanhari',
+        description: 'Mistério Felipe Castanhari'
       }
     );
   },
 
   props: {
+    showHead: {
+      type: Boolean,
+      default: true
+    },
     showBody: {
       type: Boolean,
       default: true
