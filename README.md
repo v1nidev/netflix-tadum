@@ -1,61 +1,68 @@
-Guia do projeto Netflix Tadum
-Rodando o projeto
-Git flow
-Adicionando uma nova página
-Observações
-Classes utilitárias customizadas
-Estilização customizada de elementos globais
-Componentes
-Rodando o projeto
+# Guia do projeto Netflix Tadum
+- [Rodando o projeto](#markdown-header-rodando-o-projeto)
+- [Git flow](#markdown-header-git-flow)
+- [Adicionando uma nova página](#markdown-header-adicionando-uma-nova-pagina)
+- [Observações](#markdown-header-observacoes)
+- [Classes utilitárias customizadas](#markdown-header-classes-utilitarias-customizadas)
+- [Estilização customizada de elementos globais](#markdown-header-estilizacao-customizada-de-elementos-globais)
+- [Componentes](#markdown-header-componentes)
+
+## Rodando o projeto
 Recomendamos o uso do gerenciador yarn para rodar o projeto e instalação de dependências.
 
+```
 # instale as dependencias
 yarn
 
 # rode o projeto em modo dev
 yarn dev
-Git flow
+```
+## Git flow
 Antes de iniciar o desenvolvimento de uma feature ou página, crie uma branch separada a partir da master.
-
+```
 git checkout master
 
 git pull
 
 git checkout -b feature/<page-name-or-feature>
+```
 Após finalizar o desenvolvimento, envie sua branch para o repositório:
-
+```
 git add file.txt
 
 git commit -m "Do this"
 
 git push -u origin feature/<page-name-or-feature>
+```
 Termine fazendo o PR para a branch master.
 
-Adicionando uma nova página
-Novas páginas devem ser adicionadas na pasta frontend/components/ seguindo o padrão kebab-case, exemplo: /nova-pagina/index.vue
+## Adicionando uma nova página
+Novas páginas devem ser adicionadas na pasta frontend/components/ seguindo o padrão kebab-case, exemplo: `/nova-pagina/index.vue`
 
-Use a pasta nova-pagina/ para guardar todo componente não compartilhado com outras páginas.
-Todo arquivo index.vue dentro de components/ poderá ser considerado uma página.
-Após criar o arquivo da página, acesse pelo browser, exemplo: localhost:3000/nova-pagina/
-Observações
+- Use a pasta nova-pagina/ para guardar todo componente não compartilhado com outras páginas.
+- Todo arquivo index.vue dentro de components/ poderá ser considerado uma página.
+- Após criar o arquivo da página, acesse pelo browser, exemplo: `localhost:3000/nova-pagina/`
+
+## Observações
 A importação automática de components/ está ativada nesse projeto. Saiba mais:
+- https://nuxtjs.org/guides/directory-structure/components#components-discovery
+- https://fullstackworld.com/2020-06-01-auto-import-components-in-nuxtjs/
 
-https://nuxtjs.org/guides/directory-structure/components#components-discovery
-https://fullstackworld.com/2020-06-01-auto-import-components-in-nuxtjs/
 Utilizamos o bulma e o buefy no projeto, então existem diversas classes e componentes prontos, veja as documentações:
+- https://bulma.io/
+- https://buefy.org/
 
-https://bulma.io/
-https://buefy.org/
 Para conferir como alguns componentes/classes são utilizados dentro do próprio projeto, deixamos uma página de referência em:
 
 frontend/pages/reference.vue
 
-Classes utilitárias customizadas
+
+
+## Classes utilitárias customizadas
 O bulma não disponibiliza classes utilitárias pra tudo, por isso, adicionamos as nossas.
-
-Espaçamento
+### Espaçamento
 Verifique todos os tamanhos em frontend/assets/css/spacings.scss
-
+```
 // aplica padding/margin em todos os lados:
 p-#/m-#
 
@@ -73,15 +80,18 @@ m-0-a
 // exemplos:
 m-t-8-touch
 p-4-touch
-Tamanhos de fonte
+```
+### Tamanhos de fonte
 Todos os tamanhos podem ser conferidos em frontend/assets/css/sizes.scss
-
+```
 // classes de font-size
 .is-size-1 // 193.91px ($size-1)
 .is-size-7 // 20px ($size-7)
-Cores
-As cores definidas podem ser conferidas em frontend/assets/css/colors.scss
+```
 
+### Cores
+As cores definidas podem ser conferidas em frontend/assets/css/colors.scss
+```
 // classes de cor de texto
 .has-text-purple
 .has-text-primary
@@ -91,10 +101,11 @@ As cores definidas podem ser conferidas em frontend/assets/css/colors.scss
 .has-background-purple
 .has-background-green
 .has-background-yellow
-Estilização customizada de elementos globais
-Botão Scroll to top
-Para customizar o botão, adicione o estilo como no trecho abaixo na tag style (sem o atributo scoped) no index.vue da página.
-
+```
+## Estilização customizada de elementos globais
+### Botão Scroll to top
+Para customizar o botão, adicione o estilo como no trecho abaixo na tag `style` (sem o atributo `scoped`) no index.vue da página.
+```
 <style lang="scss">
 @import "~assets/css/overrides";
 
@@ -107,12 +118,13 @@ Para customizar o botão, adicione o estilo como no trecho abaixo na tag style (
   stroke: $pink;
 }
 </style>
-Componentes
+```
+
+## Componentes
 Lista dos componentes compartilhados e uso básico. Para mais detalhes, verifique o componente dentro do projeto.
-
-ResponsiveImage
+### ResponsiveImage
 Utilizado para carregar diferentes imagens em diferentes viewport breakpoints. Uso:
-
+```
 <template>
   <ResponsiveImage :sources="image.src" :lazyload="false" :alt="image.alt" />
 </template>
@@ -131,7 +143,9 @@ export default {
   }
 }
 </script>
-LazyImage
+```
+### LazyImage
+```
 <template>
   <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
 </template>
@@ -147,9 +161,10 @@ export default {
   }
 }
 </script>
-CardSlider
+```
+### CardSlider
 Apesar do nome, o CardSlider não se limita apenas à cards. Para ver todas as opções de configuração, visite a página da lib usada: https://flickity.metafizzy.co/options.html
-
+```
 <template>
   <CardSlider :queries="slider_config" class="m-b-56">
     <div v-for="index in 10" :key="index" class="p-12">
@@ -205,7 +220,9 @@ export default {
   }
 }
 </script>
-LazyImage
+```
+### LazyImage
+```
 <template>
   <LazyImage :src="image2.src" alt="" role="presentation" class="icon-image" />
 </template>
@@ -221,9 +238,10 @@ export default {
   }
 }
 </script>
-Spotify Embed
+```
+### Spotify Embed
 Informação completa: https://developer.spotify.com/documentation/widgets/generate/embed/
-
+```
 <template>
   <iframe
     src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
@@ -238,9 +256,10 @@ Informação completa: https://developer.spotify.com/documentation/widgets/gener
 <script>
 export default { }
 </script>
-Share
+```
+### Share
 Componente simples, que normalmente será utilizado no final das páginas internas.
-
+```
 <template>
   <Share
     text-class="has-text-yellow"
@@ -251,9 +270,11 @@ Componente simples, que normalmente será utilizado no final das páginas intern
 <script>
 export default { }
 </script>
-VideoFrame
-Wrapper com os estilos próprios do projeto sobre uma lib que prove uma interface para a API do YouTube. O componente extende todos os listeners e props descritos aqui: https://github.com/kaorun343/vue-youtube-embed
-
+```
+### VideoFrame
+Wrapper com os estilos próprios do projeto sobre uma lib que prove uma interface para a API do YouTube. O componente extende todos os listeners e props descritos aqui:
+https://github.com/kaorun343/vue-youtube-embed
+```
 <template>
   <VideoFrame
     video-id="5qap5aO4i9A"
@@ -264,9 +285,11 @@ Wrapper com os estilos próprios do projeto sobre uma lib que prove uma interfac
 <script>
 export default { }
 </script>
-LetteringBanner
-Wrapper que recebe a altura máxima e o texto de background como props. As imagens flutuantes podem ser passadas dentro do componente
+```
 
+### LetteringBanner
+Wrapper que recebe a altura máxima e o texto de background como props. As imagens flutuantes podem ser passadas dentro do componente
+```
 <template>
   <LetteringBanner 
     class="is-relative banner"
@@ -276,3 +299,4 @@ Wrapper que recebe a altura máxima e o texto de background como props. As image
     <ResponsiveImage :sources="image.src" :alt="image.alt" />
   </LetteringBanner>
 </template>
+```
