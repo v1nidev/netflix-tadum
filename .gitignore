@@ -74,3 +74,6 @@ Thumbs.db
 
 # nuxt.js build output
 .nuxt
+
+# images
+**/images
